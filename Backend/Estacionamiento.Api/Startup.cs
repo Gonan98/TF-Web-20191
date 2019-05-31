@@ -10,7 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-
+using Estacionamiento.Repository.Context;
 namespace Estacionamiento.Api
 {
     public class Startup
@@ -25,6 +25,14 @@ namespace Estacionamiento.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<ApplicationDbContext>(options=>
+            options.UseSqlserver(Configuration.GetConnectionString("DefaultConnection")));
+
+             services.AddTransient<IEstacionamientoRepository, EstacionamientoRepository>();
+            services.AddTransient<IEstacionamientoService, EstacionamientoService>();
+
+            services.AddTransient<ILocalizacionRepository, LocalizacionRepository>();
+            services.AddTransient<ILocalizacionService, LocalizacionService>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 

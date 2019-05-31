@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Andre\\Documents\\AppWebCore\\TF-WEB-20191\\Backend\\Estacionamiento.Domain\\Estacionamiento.Domain.csproj": {}
+    "D:\\trabajo_estacionamiento_ver3\\Backend\\Estacionamiento.Domain\\Estacionamiento.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Andre\\Documents\\AppWebCore\\TF-WEB-20191\\Backend\\Estacionamiento.Domain\\Estacionamiento.Domain.csproj": {
+    "D:\\trabajo_estacionamiento_ver3\\Backend\\Estacionamiento.Domain\\Estacionamiento.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Andre\\Documents\\AppWebCore\\TF-WEB-20191\\Backend\\Estacionamiento.Domain\\Estacionamiento.Domain.csproj",
+        "projectUniqueName": "D:\\trabajo_estacionamiento_ver3\\Backend\\Estacionamiento.Domain\\Estacionamiento.Domain.csproj",
         "projectName": "Estacionamiento.Domain",
-        "projectPath": "C:\\Users\\Andre\\Documents\\AppWebCore\\TF-WEB-20191\\Backend\\Estacionamiento.Domain\\Estacionamiento.Domain.csproj",
-        "packagesPath": "C:\\Users\\Andre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Andre\\Documents\\AppWebCore\\TF-WEB-20191\\Backend\\Estacionamiento.Domain\\obj\\",
+        "projectPath": "D:\\trabajo_estacionamiento_ver3\\Backend\\Estacionamiento.Domain\\Estacionamiento.Domain.csproj",
+        "packagesPath": "C:\\Users\\Cesar Gutierrez\\.nuget\\packages\\",
+        "outputPath": "D:\\trabajo_estacionamiento_ver3\\Backend\\Estacionamiento.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Cesar Gutierrez\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -25,6 +25,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://packagesource": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
