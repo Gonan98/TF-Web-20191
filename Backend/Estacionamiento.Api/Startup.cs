@@ -9,8 +9,15 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
+using Estacionamiento.Repository;
 using Estacionamiento.Repository.Context;
+using Estacionamiento.Repository.implementacion;
+using Estacionamiento.Service.implementacion;
+using Estacionamiento.Service;
+using Microsoft.Extensions.Options;
+using Microsoft.EntityFrameworkCore;
+
+
 namespace Estacionamiento.Api
 {
     public class Startup
@@ -26,7 +33,7 @@ namespace Estacionamiento.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(options=>
-            options.UseSqlserver(Configuration.GetConnectionString("DefaultConnection")));
+            options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
              services.AddTransient<IEstacionamientoRepository, EstacionamientoRepository>();
             services.AddTransient<IEstacionamientoService, EstacionamientoService>();

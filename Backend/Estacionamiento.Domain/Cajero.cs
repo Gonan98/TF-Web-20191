@@ -9,7 +9,7 @@
         public string Turno_Cajero { get; set; }
 
 
-        public int PuntoAtencion_Id { get; set; }
+        public int PuntoAtencionId { get; set; }
         public PuntoAtencion puntoAtencion { get; set; }
 
     }

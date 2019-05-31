@@ -3085,23 +3085,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\user\\.nuget\\packages\\": {},
+    "C:\\Users\\Jose4\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\Desktop\\Web-2\\TF-Web-20191\\Backend\\Estacionamiento.Repository\\Estacionamiento.Repository.csproj",
+      "projectUniqueName": "C:\\Users\\Jose4\\Desktop\\Nueva carpeta\\Backend\\Estacionamiento.Repository\\Estacionamiento.Repository.csproj",
       "projectName": "Estacionamiento.Repository",
-      "projectPath": "C:\\Users\\user\\Desktop\\Web-2\\TF-Web-20191\\Backend\\Estacionamiento.Repository\\Estacionamiento.Repository.csproj",
-      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\Desktop\\Web-2\\TF-Web-20191\\Backend\\Estacionamiento.Repository\\obj\\",
+      "projectPath": "C:\\Users\\Jose4\\Desktop\\Nueva carpeta\\Backend\\Estacionamiento.Repository\\Estacionamiento.Repository.csproj",
+      "packagesPath": "C:\\Users\\Jose4\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Jose4\\Desktop\\Nueva carpeta\\Backend\\Estacionamiento.Repository\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Jose4\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3114,8 +3114,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "C:\\Users\\user\\Desktop\\Web-2\\TF-Web-20191\\Backend\\Estacionamiento.Domain\\Estacionamiento.Domain.csproj": {
-              "projectPath": "C:\\Users\\user\\Desktop\\Web-2\\TF-Web-20191\\Backend\\Estacionamiento.Domain\\Estacionamiento.Domain.csproj"
+            "C:\\Users\\Jose4\\Desktop\\Nueva carpeta\\Backend\\Estacionamiento.Domain\\Estacionamiento.Domain.csproj": {
+              "projectPath": "C:\\Users\\Jose4\\Desktop\\Nueva carpeta\\Backend\\Estacionamiento.Domain\\Estacionamiento.Domain.csproj"
             }
           }
         }
