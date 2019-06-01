@@ -1,24 +1,24 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
+using System.Linq;
 using Estacionamiento.Domain;
 using Estacionamiento.Repository.Context;
-using System.Linq;
 
 namespace Estacionamiento.Repository.implementacion
 {
-    public class PuntoAtencionRepository : IPuntoAtencionRepository
+    public class EspacioRepositoryImpl : IEspacioRepository
     {
         private ApplicationDbContext context;
 
-        public PuntoAtencionRepository(ApplicationDbContext context) {
-
-            this.context = context;
+        public EspacioRepositoryImpl(ApplicationDbContext context)
+        {
+            this.context=context;
         }
         public bool Delete(int id)
         {
             try
             {
-                var pa = context.PuntoAtenciones.Single(x => x.Id == id);
-                context.Remove(pa);
+                var result = context.Espacios.Single(x => x.EspacioId == id);
+                context.Remove(result);
                 context.SaveChanges();
             }
             catch (System.Exception)
@@ -29,12 +29,12 @@ namespace Estacionamiento.Repository.implementacion
             return true;
         }
 
-        public PuntoAtencion Get(int id)
+        public Espacio Get(int id)
         {
-            var result = new PuntoAtencion();
+            var result = new Espacio();
             try
             {
-                result = context.PuntoAtenciones.Single(x => x.Id == id);
+                result = context.Espacios.Single(x => x.EspacioId == id);
             }
             catch (System.Exception)
             {
@@ -44,22 +44,23 @@ namespace Estacionamiento.Repository.implementacion
             return result;
         }
 
-        public IEnumerable<PuntoAtencion> GetAll()
+        public IEnumerable<Espacio> GetAll()
         {
-            var result = new List<PuntoAtencion>();
+            var result = new List<Espacio>();
             try
             {
-                result = context.PuntoAtenciones.ToList();
+                result = context.Espacios.ToList();
             }
+
             catch (System.Exception)
             {
-                
+
                 throw;
             }
             return result;
         }
 
-        public bool Save(PuntoAtencion entity)
+        public bool Save(Espacio entity)
         {
             try
             {
@@ -68,28 +69,31 @@ namespace Estacionamiento.Repository.implementacion
             }
             catch (System.Exception)
             {
-                
+
                 return false;
             }
             return true;
         }
 
-        public bool Update(PuntoAtencion entity)
+        public bool Update(Espacio entity)
         {
             try
             {
-                var pa = context.PuntoAtenciones.Single(x => x.Id == entity.Id);
+                 var espacio = context.Espacios.Single(
+                     x => x.EspacioId == entity.EspacioId
+                 );
 
-                pa.Id = entity.Id;
-                pa.Ubicacion = entity.Ubicacion;
+                espacio.EspacioId = entity.EspacioId;
+                espacio.Disponible = entity.Disponible;
+                espacio.EstacionamientosId = entity.EstacionamientosId;
 
-                context.Update(pa);
-                context.SaveChanges();
+                 context.Update(espacio);
+                 context.SaveChanges();
             }
             catch (System.Exception)
             {
                 
-               return false;
+                return false;
             }
             return true;
         }

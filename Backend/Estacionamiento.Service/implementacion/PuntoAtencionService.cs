@@ -14,27 +14,27 @@ namespace Estacionamiento.Service.implementacion
         }
         public bool Delete(int id)
         {
-            throw new System.NotImplementedException();
+            return puntoAtencionRepository.Delete(id);
         }
 
         public PuntoAtencion Get(int id)
         {
-            throw new System.NotImplementedException();
+            return puntoAtencionRepository.Get(id);
         }
 
         public IEnumerable<PuntoAtencion> GetAll()
         {
-            throw new System.NotImplementedException();
+            return puntoAtencionRepository.GetAll();
         }
 
         public bool Save(PuntoAtencion entity)
         {
-            throw new System.NotImplementedException();
+            return puntoAtencionRepository.Save(entity);
         }
 
         public bool Update(PuntoAtencion entity)
         {
-            throw new System.NotImplementedException();
+            return puntoAtencionRepository.Update(entity);
         }
     }
 }

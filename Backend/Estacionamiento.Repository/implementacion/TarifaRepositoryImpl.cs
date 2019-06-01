@@ -1,24 +1,24 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
+using System.Linq;
 using Estacionamiento.Domain;
 using Estacionamiento.Repository.Context;
-using System.Linq;
 
 namespace Estacionamiento.Repository.implementacion
 {
-    public class PuntoAtencionRepository : IPuntoAtencionRepository
+    public class TarifaRepositoryImpl : ITarifaRepository
     {
         private ApplicationDbContext context;
 
-        public PuntoAtencionRepository(ApplicationDbContext context) {
-
-            this.context = context;
+        public TarifaRepositoryImpl(ApplicationDbContext context)
+        {
+            this.context=context;
         }
         public bool Delete(int id)
         {
             try
             {
-                var pa = context.PuntoAtenciones.Single(x => x.Id == id);
-                context.Remove(pa);
+                var tarifa = context.Tarifas.Single(x => x.TarifaId == id);
+                context.Remove(tarifa);
                 context.SaveChanges();
             }
             catch (System.Exception)
@@ -29,12 +29,12 @@ namespace Estacionamiento.Repository.implementacion
             return true;
         }
 
-        public PuntoAtencion Get(int id)
+        public Tarifa Get(int id)
         {
-            var result = new PuntoAtencion();
+            var result = new Tarifa();
             try
             {
-                result = context.PuntoAtenciones.Single(x => x.Id == id);
+                result = context.Tarifas.Single(x => x.TarifaId == id);
             }
             catch (System.Exception)
             {
@@ -44,12 +44,12 @@ namespace Estacionamiento.Repository.implementacion
             return result;
         }
 
-        public IEnumerable<PuntoAtencion> GetAll()
+        public IEnumerable<Tarifa> GetAll()
         {
-            var result = new List<PuntoAtencion>();
+            var result = new List<Tarifa>();
             try
             {
-                result = context.PuntoAtenciones.ToList();
+                result = context.Tarifas.ToList();
             }
             catch (System.Exception)
             {
@@ -59,7 +59,7 @@ namespace Estacionamiento.Repository.implementacion
             return result;
         }
 
-        public bool Save(PuntoAtencion entity)
+        public bool Save(Tarifa entity)
         {
             try
             {
@@ -74,22 +74,22 @@ namespace Estacionamiento.Repository.implementacion
             return true;
         }
 
-        public bool Update(PuntoAtencion entity)
+        public bool Update(Tarifa entity)
         {
             try
             {
-                var pa = context.PuntoAtenciones.Single(x => x.Id == entity.Id);
+                var tarifa = context.Tarifas.Single(x => x.TarifaId == entity.TarifaId);
+                tarifa.TarifaId = entity.TarifaId;
+                tarifa.Monto = entity.Monto;
+                tarifa.TipoVehiculo = entity.TipoVehiculo;
 
-                pa.Id = entity.Id;
-                pa.Ubicacion = entity.Ubicacion;
-
-                context.Update(pa);
+                context.Update(tarifa);
                 context.SaveChanges();
             }
             catch (System.Exception)
             {
                 
-               return false;
+                return false;
             }
             return true;
         }

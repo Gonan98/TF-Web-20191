@@ -79,7 +79,7 @@ namespace Estacionamiento.Repository.implementacion
                  estacionamientoOrigina.Nombre_Estacionamiento=entity.Nombre_Estacionamiento;
                  estacionamientoOrigina.Numero_Espacios=entity.Numero_Espacios;
                  estacionamientoOrigina.Direccion=entity.Direccion;
-                 estacionamientoOrigina.localizacion_id=entity.localizacion_id;
+                 estacionamientoOrigina.LocalizacionId=entity.LocalizacionId;
                  context.Update(estacionamientoOrigina);
                  context.SaveChanges();
             }

@@ -36,14 +36,26 @@ namespace Estacionamiento.Api
             services.AddDbContext<ApplicationDbContext>(options=>
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
-             services.AddTransient<IEstacionamientoRepository, EstacionamientoRepository>();
+            services.AddTransient<IEstacionamientoRepository, EstacionamientoRepository>();
             services.AddTransient<IEstacionamientoService, EstacionamientoService>();
 
             services.AddTransient<ILocalizacionRepository, LocalizacionRepository>();
             services.AddTransient<ILocalizacionService, LocalizacionService>();
             
-             services.AddTransient<IIngresoRepository, IngresoRepository>();
+            services.AddTransient<IIngresoRepository, IngresoRepository>();
             services.AddTransient<IIngresoService, IngresoService>();
+
+            services.AddTransient<IEspacioRepository, EspacioRepositoryImpl>();
+            services.AddTransient<IEspacioService, EspacioService>();
+
+            services.AddTransient<ITarifaRepository, TarifaRepositoryImpl>();
+            services.AddTransient<ITarifaService, TarifaService>();
+
+            services.AddTransient<ICajeroRepository, CajeroRepository>();
+            services.AddTransient<ICajeroService, CajeroService>();
+
+            services.AddTransient<IPuntoAtencionRepository, PuntoAtencionRepository>();
+            services.AddTransient<IPuntoAtencionService, PuntoAtencionService>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
            

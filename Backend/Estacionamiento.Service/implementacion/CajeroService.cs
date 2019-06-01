@@ -15,27 +15,27 @@ namespace Estacionamiento.Service.implementacion
         }
         public bool Delete(int id)
         {
-            throw new System.NotImplementedException();
+            return cajeroRepository.Delete(id);
         }
 
         public Cajero Get(int id)
         {
-            throw new System.NotImplementedException();
+            return cajeroRepository.Get(id);
         }
 
         public IEnumerable<Cajero> GetAll()
         {
-            throw new System.NotImplementedException();
+            return cajeroRepository.GetAll();
         }
 
         public bool Save(Cajero entity)
         {
-            throw new System.NotImplementedException();
+            return cajeroRepository.Save(entity);
         }
 
         public bool Update(Cajero entity)
         {
-            throw new System.NotImplementedException();
+            return cajeroRepository.Update(entity);
         }
     }
 }

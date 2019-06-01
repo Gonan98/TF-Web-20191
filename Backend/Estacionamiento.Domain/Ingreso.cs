@@ -10,16 +10,15 @@ namespace Estacionamiento.Domain
     public class Ingreso
     {
          
-        public int Id{get;set;}
-       /* Tarifa cod_tarifa;*/ 
-
-        public int CajeroId;
+        public int Id {get;set;}
+        public int TarifaId {get; set;}
+        public Tarifa Tarifa {get; set;}
+        public int CajeroId {get; set;}
         public Cajero Cajero{get;set;}
-        
 
         public string Placa{get;set;}
-         public  DateTime HInicio{get;set;}
-       /*Espacio cod_espacio; */ 
-
+        public  DateTime HInicio{get;set;}
+        public int EspacioId {get; set;}
+        Espacio Espacio {get; set;}
     }
 }

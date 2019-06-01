@@ -1,12 +1,13 @@
 using System.Collections.Generic;
 using Estacionamiento.Domain;
+using System.Linq;
 using Estacionamiento.Repository.Context;
 
 namespace Estacionamiento.Repository.implementacion
 {
     public class LocalizacionRepository : ILocalizacionRepository
     {
-         private ApplicationDbContext context;
+        private ApplicationDbContext context;
 
         public LocalizacionRepository(ApplicationDbContext context)
         {
@@ -14,27 +15,84 @@ namespace Estacionamiento.Repository.implementacion
         }
         public bool Delete(int id)
         {
-            throw new System.NotImplementedException();
+            try
+            {
+                var local = context.Localizaciones.Single(x => x.Id == id);
+
+                context.Update(local);
+                context.SaveChanges();
+            }
+            catch (System.Exception)
+            {
+                
+                return false;
+            }
+            return true;
         }
 
         public Localizacion Get(int id)
         {
-            throw new System.NotImplementedException();
+            var result = new Localizacion();
+            try
+            {
+                result = context.Localizaciones.Single(x => x.Id == id);
+            }
+            catch (System.Exception)
+            {
+                
+                throw;
+            }
+            return result;
         }
 
         public IEnumerable<Localizacion> GetAll()
         {
-            throw new System.NotImplementedException();
+            var result = new List<Localizacion>();
+            try
+            {
+                result = context.Localizaciones.ToList();
+            }
+            catch (System.Exception)
+            {
+                
+                throw;
+            }
+            return result;
         }
 
         public bool Save(Localizacion entity)
         {
-            throw new System.NotImplementedException();
+            try
+            {
+                context.Add(entity);
+                context.SaveChanges();
+            }
+            catch (System.Exception)
+            {
+                
+                return false;
+            }
+            return true;
         }
 
         public bool Update(Localizacion entity)
         {
-            throw new System.NotImplementedException();
+            try
+            {
+                var local = context.Localizaciones.Single(x => x.Id == entity.Id);
+                
+                local.Id = entity.Id;
+                local.Nombre_Localizacion = entity.Nombre_Localizacion;
+
+                context.Update(local);
+                context.SaveChanges();
+            }
+            catch (System.Exception)
+            {
+                
+               return false;
+            }
+            return true;
         }
     }
 }
