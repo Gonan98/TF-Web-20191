@@ -24,7 +24,7 @@ namespace Estacionamiento.Repository.Context
         modelBuilder.Entity<Ingreso>().Property(s => s.Placa).IsRequired();
         modelBuilder.Entity<Ingreso>().Property(s => s.HInicio).IsRequired();
 
-        modelBuilder.Entity<Comprobante>().Property(s => s.cod_ingreso).IsRequired();
+        //modelBuilder.Entity<Comprobante>().Property(s => s.cod_ingreso).IsRequired();
         modelBuilder.Entity<Comprobante>().Property(s => s.horaFin).IsRequired();
     }
 

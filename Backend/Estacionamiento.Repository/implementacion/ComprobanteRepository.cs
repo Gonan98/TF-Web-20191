@@ -78,7 +78,7 @@ namespace Estacionamiento.Repository.implementacion
                  );
 
                  comprobanteOrigina.id=entity.id;
-                 comprobanteOrigina.cod_ingreso=entity.cod_ingreso;
+                 //comprobanteOrigina.cod_ingreso=entity.cod_ingreso;
                  comprobanteOrigina.horaIni=entity.horaIni;
                  comprobanteOrigina.horaFin=entity.horaFin;
                  comprobanteOrigina.monto=entity.monto;
