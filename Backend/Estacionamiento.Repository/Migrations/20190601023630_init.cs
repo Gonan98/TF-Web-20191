@@ -9,6 +9,21 @@ namespace Estacionamiento.Repository.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "Comprobantes",
+                columns: table => new
+                {
+                    id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    horaIni = table.Column<DateTime>(nullable: false),
+                    horaFin = table.Column<DateTime>(nullable: false),
+                    monto = table.Column<double>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Comprobantes", x => x.id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "estacionamientos",
                 columns: table => new
                 {
@@ -105,6 +120,9 @@ namespace Estacionamiento.Repository.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "Comprobantes");
+
             migrationBuilder.DropTable(
                 name: "estacionamientos");
 

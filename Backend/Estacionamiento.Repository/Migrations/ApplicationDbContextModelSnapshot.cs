@@ -38,6 +38,23 @@ namespace Estacionamiento.Repository.Migrations
                     b.ToTable("cajeros");
                 });
 
+            modelBuilder.Entity("Estacionamiento.Domain.Comprobante", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("horaFin");
+
+                    b.Property<DateTime>("horaIni");
+
+                    b.Property<double>("monto");
+
+                    b.HasKey("id");
+
+                    b.ToTable("Comprobantes");
+                });
+
             modelBuilder.Entity("Estacionamiento.Domain.Estacionamientos", b =>
                 {
                     b.Property<int>("Id")

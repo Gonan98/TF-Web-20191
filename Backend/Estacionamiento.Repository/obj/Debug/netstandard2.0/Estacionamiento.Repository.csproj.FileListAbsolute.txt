@@ -1,0 +1,12 @@
+C:\Users\0l0\Desktop\Aplicaciones WEB\TF-Web-20191\Backend\Estacionamiento.Repository\obj\Debug\netstandard2.0\Estacionamiento.Repository.csprojAssemblyReference.cache
+C:\Users\0l0\Desktop\Aplicaciones WEB\TF-Web-20191\Backend\Estacionamiento.Repository\obj\Debug\netstandard2.0\Estacionamiento.Repository.csproj.CoreCompileInputs.cache
+C:\Users\0l0\Desktop\Aplicaciones WEB\TF-Web-20191\Backend\Estacionamiento.Repository\obj\Debug\netstandard2.0\Estacionamiento.Repository.AssemblyInfoInputs.cache
+C:\Users\0l0\Desktop\Aplicaciones WEB\TF-Web-20191\Backend\Estacionamiento.Repository\obj\Debug\netstandard2.0\Estacionamiento.Repository.AssemblyInfo.cs
+C:\Users\0l0\Desktop\Aplicaciones WEB\TF-Web-20191\Backend\Estacionamiento.Repository\bin\Debug\netstandard2.0\Estacionamiento.Repository.deps.json
+C:\Users\0l0\Desktop\Aplicaciones WEB\TF-Web-20191\Backend\Estacionamiento.Repository\bin\Debug\netstandard2.0\Estacionamiento.Repository.dll
+C:\Users\0l0\Desktop\Aplicaciones WEB\TF-Web-20191\Backend\Estacionamiento.Repository\bin\Debug\netstandard2.0\Estacionamiento.Repository.pdb
+C:\Users\0l0\Desktop\Aplicaciones WEB\TF-Web-20191\Backend\Estacionamiento.Repository\bin\Debug\netstandard2.0\Estacionamiento.Domain.dll
+C:\Users\0l0\Desktop\Aplicaciones WEB\TF-Web-20191\Backend\Estacionamiento.Repository\bin\Debug\netstandard2.0\Estacionamiento.Domain.pdb
+C:\Users\0l0\Desktop\Aplicaciones WEB\TF-Web-20191\Backend\Estacionamiento.Repository\obj\Debug\netstandard2.0\Estacionamiento.Repository.csproj.CopyComplete
+C:\Users\0l0\Desktop\Aplicaciones WEB\TF-Web-20191\Backend\Estacionamiento.Repository\obj\Debug\netstandard2.0\Estacionamiento.Repository.dll
+C:\Users\0l0\Desktop\Aplicaciones WEB\TF-Web-20191\Backend\Estacionamiento.Repository\obj\Debug\netstandard2.0\Estacionamiento.Repository.pdb

@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Estacionamiento.Repository.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20190531223248_init")]
+    [Migration("20190601023630_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -38,6 +38,23 @@ namespace Estacionamiento.Repository.Migrations
                     b.HasIndex("PuntoAtencionId");
 
                     b.ToTable("cajeros");
+                });
+
+            modelBuilder.Entity("Estacionamiento.Domain.Comprobante", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("horaFin");
+
+                    b.Property<DateTime>("horaIni");
+
+                    b.Property<double>("monto");
+
+                    b.HasKey("id");
+
+                    b.ToTable("Comprobantes");
                 });
 
             modelBuilder.Entity("Estacionamiento.Domain.Estacionamientos", b =>
