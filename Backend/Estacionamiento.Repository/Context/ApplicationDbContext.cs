@@ -12,6 +12,7 @@ namespace Estacionamiento.Repository.Context
          public DbSet<Tarifa> Tarifas {get; set;}
          public DbSet<Espacio> Espacios {get; set;}
          public DbSet<PuntoAtencion> PuntoAtenciones {get; set;}
+         public DbSet<Comprobante> Comprobantes {get; set;}
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
