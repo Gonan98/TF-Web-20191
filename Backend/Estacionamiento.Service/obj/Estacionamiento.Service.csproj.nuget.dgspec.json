@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Jose4\\Desktop\\Nueva carpeta\\Backend\\Estacionamiento.Service\\Estacionamiento.Service.csproj": {}
+    "C:\\Users\\0l0\\Desktop\\Aplicaciones WEB\\TF-Web-20191\\Backend\\Estacionamiento.Service\\Estacionamiento.Service.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Jose4\\Desktop\\Nueva carpeta\\Backend\\Estacionamiento.Domain\\Estacionamiento.Domain.csproj": {
+    "C:\\Users\\0l0\\Desktop\\Aplicaciones WEB\\TF-Web-20191\\Backend\\Estacionamiento.Domain\\Estacionamiento.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jose4\\Desktop\\Nueva carpeta\\Backend\\Estacionamiento.Domain\\Estacionamiento.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\0l0\\Desktop\\Aplicaciones WEB\\TF-Web-20191\\Backend\\Estacionamiento.Domain\\Estacionamiento.Domain.csproj",
         "projectName": "Estacionamiento.Domain",
-        "projectPath": "C:\\Users\\Jose4\\Desktop\\Nueva carpeta\\Backend\\Estacionamiento.Domain\\Estacionamiento.Domain.csproj",
-        "packagesPath": "C:\\Users\\Jose4\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jose4\\Desktop\\Nueva carpeta\\Backend\\Estacionamiento.Domain\\obj\\",
+        "projectPath": "C:\\Users\\0l0\\Desktop\\Aplicaciones WEB\\TF-Web-20191\\Backend\\Estacionamiento.Domain\\Estacionamiento.Domain.csproj",
+        "packagesPath": "C:\\Users\\0l0\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\0l0\\Desktop\\Aplicaciones WEB\\TF-Web-20191\\Backend\\Estacionamiento.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Jose4\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\0l0\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -56,20 +56,20 @@
         }
       }
     },
-    "C:\\Users\\Jose4\\Desktop\\Nueva carpeta\\Backend\\Estacionamiento.Repository\\Estacionamiento.Repository.csproj": {
+    "C:\\Users\\0l0\\Desktop\\Aplicaciones WEB\\TF-Web-20191\\Backend\\Estacionamiento.Repository\\Estacionamiento.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jose4\\Desktop\\Nueva carpeta\\Backend\\Estacionamiento.Repository\\Estacionamiento.Repository.csproj",
+        "projectUniqueName": "C:\\Users\\0l0\\Desktop\\Aplicaciones WEB\\TF-Web-20191\\Backend\\Estacionamiento.Repository\\Estacionamiento.Repository.csproj",
         "projectName": "Estacionamiento.Repository",
-        "projectPath": "C:\\Users\\Jose4\\Desktop\\Nueva carpeta\\Backend\\Estacionamiento.Repository\\Estacionamiento.Repository.csproj",
-        "packagesPath": "C:\\Users\\Jose4\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jose4\\Desktop\\Nueva carpeta\\Backend\\Estacionamiento.Repository\\obj\\",
+        "projectPath": "C:\\Users\\0l0\\Desktop\\Aplicaciones WEB\\TF-Web-20191\\Backend\\Estacionamiento.Repository\\Estacionamiento.Repository.csproj",
+        "packagesPath": "C:\\Users\\0l0\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\0l0\\Desktop\\Aplicaciones WEB\\TF-Web-20191\\Backend\\Estacionamiento.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Jose4\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\0l0\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -82,8 +82,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "C:\\Users\\Jose4\\Desktop\\Nueva carpeta\\Backend\\Estacionamiento.Domain\\Estacionamiento.Domain.csproj": {
-                "projectPath": "C:\\Users\\Jose4\\Desktop\\Nueva carpeta\\Backend\\Estacionamiento.Domain\\Estacionamiento.Domain.csproj"
+              "C:\\Users\\0l0\\Desktop\\Aplicaciones WEB\\TF-Web-20191\\Backend\\Estacionamiento.Domain\\Estacionamiento.Domain.csproj": {
+                "projectPath": "C:\\Users\\0l0\\Desktop\\Aplicaciones WEB\\TF-Web-20191\\Backend\\Estacionamiento.Domain\\Estacionamiento.Domain.csproj"
               }
             }
           }
@@ -116,20 +116,20 @@
         }
       }
     },
-    "C:\\Users\\Jose4\\Desktop\\Nueva carpeta\\Backend\\Estacionamiento.Service\\Estacionamiento.Service.csproj": {
+    "C:\\Users\\0l0\\Desktop\\Aplicaciones WEB\\TF-Web-20191\\Backend\\Estacionamiento.Service\\Estacionamiento.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jose4\\Desktop\\Nueva carpeta\\Backend\\Estacionamiento.Service\\Estacionamiento.Service.csproj",
+        "projectUniqueName": "C:\\Users\\0l0\\Desktop\\Aplicaciones WEB\\TF-Web-20191\\Backend\\Estacionamiento.Service\\Estacionamiento.Service.csproj",
         "projectName": "Estacionamiento.Service",
-        "projectPath": "C:\\Users\\Jose4\\Desktop\\Nueva carpeta\\Backend\\Estacionamiento.Service\\Estacionamiento.Service.csproj",
-        "packagesPath": "C:\\Users\\Jose4\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jose4\\Desktop\\Nueva carpeta\\Backend\\Estacionamiento.Service\\obj\\",
+        "projectPath": "C:\\Users\\0l0\\Desktop\\Aplicaciones WEB\\TF-Web-20191\\Backend\\Estacionamiento.Service\\Estacionamiento.Service.csproj",
+        "packagesPath": "C:\\Users\\0l0\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\0l0\\Desktop\\Aplicaciones WEB\\TF-Web-20191\\Backend\\Estacionamiento.Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Jose4\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\0l0\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -142,11 +142,11 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "C:\\Users\\Jose4\\Desktop\\Nueva carpeta\\Backend\\Estacionamiento.Domain\\Estacionamiento.Domain.csproj": {
-                "projectPath": "C:\\Users\\Jose4\\Desktop\\Nueva carpeta\\Backend\\Estacionamiento.Domain\\Estacionamiento.Domain.csproj"
+              "C:\\Users\\0l0\\Desktop\\Aplicaciones WEB\\TF-Web-20191\\Backend\\Estacionamiento.Domain\\Estacionamiento.Domain.csproj": {
+                "projectPath": "C:\\Users\\0l0\\Desktop\\Aplicaciones WEB\\TF-Web-20191\\Backend\\Estacionamiento.Domain\\Estacionamiento.Domain.csproj"
               },
-              "C:\\Users\\Jose4\\Desktop\\Nueva carpeta\\Backend\\Estacionamiento.Repository\\Estacionamiento.Repository.csproj": {
-                "projectPath": "C:\\Users\\Jose4\\Desktop\\Nueva carpeta\\Backend\\Estacionamiento.Repository\\Estacionamiento.Repository.csproj"
+              "C:\\Users\\0l0\\Desktop\\Aplicaciones WEB\\TF-Web-20191\\Backend\\Estacionamiento.Repository\\Estacionamiento.Repository.csproj": {
+                "projectPath": "C:\\Users\\0l0\\Desktop\\Aplicaciones WEB\\TF-Web-20191\\Backend\\Estacionamiento.Repository\\Estacionamiento.Repository.csproj"
               }
             }
           }

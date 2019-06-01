@@ -9,6 +9,7 @@ namespace Estacionamiento.Repository.Context
           public DbSet<Localizacion> localizaciones { get; set; }
             public DbSet<Cajero> cajeros { get; set; }
             public DbSet<Ingreso> Ingresos{get;set;}
+            public DbSet<Comprobante> Comprobantes{get; set;}
 
           public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
@@ -22,6 +23,9 @@ namespace Estacionamiento.Repository.Context
         //Property Configurations
         modelBuilder.Entity<Ingreso>().Property(s => s.Placa).IsRequired();
         modelBuilder.Entity<Ingreso>().Property(s => s.HInicio).IsRequired();
+
+        modelBuilder.Entity<Comprobante>().Property(s => s.cod_ingreso).IsRequired();
+        modelBuilder.Entity<Comprobante>().Property(s => s.horaFin).IsRequired();
     }
 
     
