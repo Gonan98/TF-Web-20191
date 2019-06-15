@@ -57,6 +57,9 @@ namespace Estacionamiento.Api
             services.AddTransient<IPuntoAtencionRepository, PuntoAtencionRepository>();
             services.AddTransient<IPuntoAtencionService, PuntoAtencionService>();
 
+            services.AddTransient<IComprobanteRepository, ComprobanteRepository>();
+            services.AddTransient<IComprobanteService, ComprobanteService>();
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
            
               services.AddSwaggerGen(swagger =>

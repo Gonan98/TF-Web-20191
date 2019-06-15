@@ -35,7 +35,7 @@ namespace Estacionamiento.Repository.Migrations
 
                     b.HasIndex("PuntoAtencionId");
 
-                    b.ToTable("cajeros");
+                    b.ToTable("Cajeros");
                 });
 
             modelBuilder.Entity("Estacionamiento.Domain.Comprobante", b =>
@@ -48,11 +48,32 @@ namespace Estacionamiento.Repository.Migrations
 
                     b.Property<DateTime>("horaIni");
 
+                    b.Property<int>("ingresoId");
+
                     b.Property<double>("monto");
 
                     b.HasKey("id");
 
+                    b.HasIndex("ingresoId");
+
                     b.ToTable("Comprobantes");
+                });
+
+            modelBuilder.Entity("Estacionamiento.Domain.Espacio", b =>
+                {
+                    b.Property<int>("EspacioId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<bool>("Disponible");
+
+                    b.Property<int>("EstacionamientosId");
+
+                    b.HasKey("EspacioId");
+
+                    b.HasIndex("EstacionamientosId");
+
+                    b.ToTable("Espacios");
                 });
 
             modelBuilder.Entity("Estacionamiento.Domain.Estacionamientos", b =>
@@ -63,13 +84,15 @@ namespace Estacionamiento.Repository.Migrations
 
                     b.Property<string>("Direccion");
 
+                    b.Property<int>("LocalizacionId");
+
                     b.Property<string>("Nombre_Estacionamiento");
 
                     b.Property<int>("Numero_Espacios");
 
-                    b.Property<int>("localizacion_id");
-
                     b.HasKey("Id");
+
+                    b.HasIndex("LocalizacionId");
 
                     b.ToTable("estacionamientos");
                 });
@@ -80,16 +103,22 @@ namespace Estacionamiento.Repository.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("CajeroId1");
+                    b.Property<int>("CajeroId");
+
+                    b.Property<int>("EspacioId");
 
                     b.Property<DateTime>("HInicio");
 
                     b.Property<string>("Placa")
                         .IsRequired();
 
+                    b.Property<int>("TarifaId");
+
                     b.HasKey("Id");
 
-                    b.HasIndex("CajeroId1");
+                    b.HasIndex("CajeroId");
+
+                    b.HasIndex("TarifaId");
 
                     b.ToTable("Ingresos");
                 });
@@ -104,7 +133,7 @@ namespace Estacionamiento.Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("localizaciones");
+                    b.ToTable("Localizaciones");
                 });
 
             modelBuilder.Entity("Estacionamiento.Domain.PuntoAtencion", b =>
@@ -117,7 +146,22 @@ namespace Estacionamiento.Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("PuntoAtencion");
+                    b.ToTable("PuntoAtenciones");
+                });
+
+            modelBuilder.Entity("Estacionamiento.Domain.Tarifa", b =>
+                {
+                    b.Property<int>("TarifaId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<double>("Monto");
+
+                    b.Property<string>("TipoVehiculo");
+
+                    b.HasKey("TarifaId");
+
+                    b.ToTable("Tarifas");
                 });
 
             modelBuilder.Entity("Estacionamiento.Domain.Cajero", b =>
@@ -128,11 +172,41 @@ namespace Estacionamiento.Repository.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
+            modelBuilder.Entity("Estacionamiento.Domain.Comprobante", b =>
+                {
+                    b.HasOne("Estacionamiento.Domain.Ingreso", "Ingreso")
+                        .WithMany()
+                        .HasForeignKey("ingresoId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Estacionamiento.Domain.Espacio", b =>
+                {
+                    b.HasOne("Estacionamiento.Domain.Estacionamientos", "Estacionamientos")
+                        .WithMany()
+                        .HasForeignKey("EstacionamientosId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Estacionamiento.Domain.Estacionamientos", b =>
+                {
+                    b.HasOne("Estacionamiento.Domain.Localizacion", "Localizacion")
+                        .WithMany()
+                        .HasForeignKey("LocalizacionId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
             modelBuilder.Entity("Estacionamiento.Domain.Ingreso", b =>
                 {
                     b.HasOne("Estacionamiento.Domain.Cajero", "Cajero")
                         .WithMany()
-                        .HasForeignKey("CajeroId1");
+                        .HasForeignKey("CajeroId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Estacionamiento.Domain.Tarifa", "Tarifa")
+                        .WithMany()
+                        .HasForeignKey("TarifaId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }
