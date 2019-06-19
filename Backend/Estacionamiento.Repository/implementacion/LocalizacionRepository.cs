@@ -82,7 +82,7 @@ namespace Estacionamiento.Repository.implementacion
                 var local = context.Localizaciones.Single(x => x.Id == entity.Id);
                 
                 local.Id = entity.Id;
-                local.Nombre_Localizacion = entity.Nombre_Localizacion;
+                local.NombreLocalizacion = entity.NombreLocalizacion;
 
                 context.Update(local);
                 context.SaveChanges();

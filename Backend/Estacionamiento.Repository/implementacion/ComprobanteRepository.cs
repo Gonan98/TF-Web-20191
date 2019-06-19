@@ -16,7 +16,7 @@ namespace Estacionamiento.Repository.implementacion
         {
             var objElim = new Comprobante();
             try{
-                objElim=context.Comprobantes.Single(x => x.id == id);
+                objElim=context.Comprobantes.Single(x => x.Id == id);
                 context.Comprobantes.Remove(objElim);
                 context.SaveChanges();
             }
@@ -32,7 +32,7 @@ namespace Estacionamiento.Repository.implementacion
             var result = new Comprobante();
             try
             {
-                result = context.Comprobantes.Single(x => x.id == id);
+                result = context.Comprobantes.Single(x => x.Id == id);
             }
             catch (System.Exception)
             {
@@ -74,14 +74,14 @@ namespace Estacionamiento.Repository.implementacion
             try
             {
                  var comprobanteOrigina = context.Comprobantes.Single(
-                     x => x.id == entity.id
+                     x => x.Id == entity.Id
                  );
 
-                 comprobanteOrigina.id=entity.id;
-                 comprobanteOrigina.ingresoId=entity.ingresoId;
+                 comprobanteOrigina.Id=entity.Id;
+                 comprobanteOrigina.IngresoId=entity.IngresoId;
                  comprobanteOrigina.horaIni=entity.horaIni;
                  comprobanteOrigina.horaFin=entity.horaFin;
-                 comprobanteOrigina.monto=entity.monto;
+                 comprobanteOrigina.Monto=entity.Monto;
 
                  context.Update(comprobanteOrigina);
                  context.SaveChanges();

@@ -6,6 +6,6 @@ namespace Estacionamiento.Domain
     {
         public int Id { get; set; }
         public string Ubicacion { get; set; }
-        public IList<Cajero> Cajeros { get; set; }
+        public IEnumerable<Cajero> Cajeros { get; set; }
     }
 }

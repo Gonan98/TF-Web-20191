@@ -6,6 +6,6 @@ namespace Estacionamiento.Domain
     {
         public int TarifaId { get; set;}
         public double Monto {get; set;}
-        public String TipoVehiculo {get; set;}
+        public string TipoVehiculo {get; set;}
     }
 }

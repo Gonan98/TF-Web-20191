@@ -81,8 +81,8 @@ namespace Estacionamiento.Repository.implementacion
                 var cajero = context.Cajeros.Single(x => x.Id == entity.Id);
 
                 cajero.Id = entity.Id;
-                cajero.Nombre_Cajero = entity.Nombre_Cajero;
-                cajero.Turno_Cajero = entity.Turno_Cajero;
+                cajero.NombreCajero = entity.NombreCajero;
+                cajero.TurnoCajero = entity.TurnoCajero;
                 cajero.PuntoAtencionId = entity.PuntoAtencionId;
 
                 context.Update(cajero);
