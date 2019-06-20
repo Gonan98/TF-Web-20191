@@ -13,27 +13,27 @@ namespace Estacionamiento.Service.implementacion
         }
         public bool Delete(int id)
         {
-            throw new System.NotImplementedException();
+            return localizacionRepository.Delete(id);
         }
 
         public Localizacion Get(int id)
         {
-            throw new System.NotImplementedException();
+            return localizacionRepository.Get(id);
         }
 
         public IEnumerable<Localizacion> GetAll()
         {
-            throw new System.NotImplementedException();
+            return localizacionRepository.GetAll();
         }
 
         public bool Save(Localizacion entity)
         {
-            throw new System.NotImplementedException();
+            return localizacionRepository.Save(entity);
         }
 
         public bool Update(Localizacion entity)
         {
-            throw new System.NotImplementedException();
+            return localizacionRepository.Update(entity);
         }
     }
 }
