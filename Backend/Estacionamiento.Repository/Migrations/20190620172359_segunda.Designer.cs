@@ -4,14 +4,16 @@ using Estacionamiento.Repository.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Estacionamiento.Repository.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20190620172359_segunda")]
+    partial class segunda
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -118,8 +120,6 @@ namespace Estacionamiento.Repository.Migrations
 
                     b.HasIndex("CajeroId");
 
-                    b.HasIndex("EspacioId");
-
                     b.HasIndex("TarifaId");
 
                     b.ToTable("Ingresos");
@@ -203,11 +203,6 @@ namespace Estacionamiento.Repository.Migrations
                     b.HasOne("Estacionamiento.Domain.Cajero", "Cajero")
                         .WithMany()
                         .HasForeignKey("CajeroId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("Estacionamiento.Domain.Espacio", "Espacio")
-                        .WithMany()
-                        .HasForeignKey("EspacioId")
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("Estacionamiento.Domain.Tarifa", "Tarifa")

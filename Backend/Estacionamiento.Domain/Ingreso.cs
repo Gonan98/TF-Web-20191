@@ -17,8 +17,8 @@ namespace Estacionamiento.Domain
         public Cajero Cajero{get;set;}
 
         public string Placa{get;set;}
-        public  DateTime HInicio{get;set;}
+        public DateTime HInicio{get;set;}
         public int EspacioId {get; set;}
-        Espacio Espacio {get; set;}
+        public Espacio Espacio {get; set;}
     }
 }
