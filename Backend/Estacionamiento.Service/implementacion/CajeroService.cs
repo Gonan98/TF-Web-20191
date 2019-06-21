@@ -7,7 +7,6 @@ namespace Estacionamiento.Service.implementacion
     public class CajeroService : ICajeroService
     {
         private ICajeroRepository cajeroRepository;
-        private IPuntoAtencionRepository puntoAtencionRepository;
 
         public CajeroService(ICajeroRepository cajeroRepository) {
 

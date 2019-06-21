@@ -1,14 +1,14 @@
 using System;
 
-namespace Estacionamiento.Domain
+namespace Estacionamiento.Repository.ViewModel
 {
-    public class Comprobante
+    public class ComprobanteViewModel
     {
         public int Id {get; set;}
         public int IngresoId {get; set;}
-        public Ingreso Ingreso {get; set;}
+        public string Placa {get; set;}
+        public DateTime HInicio {get; set;}
         public DateTime horaFin {get; set;}
         public double Monto {get; set;}
-
     }
 }
