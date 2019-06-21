@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Estacionamiento.Domain;
 using Estacionamiento.Repository;
+using System.Linq;
 
 namespace Estacionamiento.Service.implementacion
 {
@@ -27,7 +28,16 @@ namespace Estacionamiento.Service.implementacion
 
         public bool Save(Ingreso entity)
         {
+            
+            var list=(List<Ingreso>)ingresorepository.GetAll();
+            var result=list.FirstOrDefault(x=>x.Placa.Trim().ToLower()==entity.Placa.Trim().ToLower());
+            if (result==null)
+            {
             return ingresorepository.Save(entity);
+                
+            }
+            return false;
+            
         }
 
         public bool Update(Ingreso entity)
