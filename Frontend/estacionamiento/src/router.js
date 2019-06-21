@@ -6,7 +6,8 @@ import Comprobante from './components/Comprobante.vue'
 import Espacio from './components/Espacio.vue'
 import Estacionamiento from './components/Estacionamiento.vue'
 import Ingreso from './components/Ingreso.vue'
-import Localizacion from './components/PuntoAtencion.vue'
+import PuntoAtencion from './components/PuntoAtencion.vue'
+import Localizacion from './components/Localizacion.vue'
 import Tarifa from './components/Tarifa.vue'
 
 Vue.use(Router)
@@ -40,7 +41,7 @@ export default new Router({
       component: Espacio
     },
     {
-      path: '/estacionamiento',
+      path: '/estacionamientos',
       name: 'estacionamientos',
       component:  Estacionamiento
     },
