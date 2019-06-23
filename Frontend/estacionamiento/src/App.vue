@@ -77,16 +77,7 @@
                 </v-list-tile-title>
               </v-list-tile-content>
             </v-list-tile>
-            <v-list-tile :to="{ name: 'ingresos'}">
-              <v-list-tile-action>
-                <v-icon>table_chart</v-icon>
-              </v-list-tile-action>
-              <v-list-tile-content>
-                <v-list-tile-title>
-                  Ingreso
-                </v-list-tile-title>
-              </v-list-tile-content>
-            </v-list-tile>
+            
             <v-list-tile :to="{ name: 'comprobantes'}">
               <v-list-tile-action>
                 <v-icon>table_chart</v-icon>
@@ -108,6 +99,26 @@
               </v-list-tile-content>
               </v-list-tile>
 
+          </v-list-group>
+          <v-list-group>
+            <v-list-tile slot="activator">
+              <v-list-tile-content>
+                <v-list-tile-title>
+                  Admin
+                </v-list-tile-title>
+              </v-list-tile-content>
+            </v-list-tile>
+            <v-list-tile :to="{ name: 'ingresos'}">
+              <v-list-tile-action>
+                <v-icon>table_chart</v-icon>
+              </v-list-tile-action>
+              <v-list-tile-content>
+                <v-list-tile-title>
+                  Ingreso
+                </v-list-tile-title>
+              </v-list-tile-content>
+            </v-list-tile>
+            
           </v-list-group>
         </template>
         
@@ -160,7 +171,7 @@ export default {
   name: 'App',
   data () {
     return {
-      drawer: true,
+      drawer: false,
      }
   }
 }

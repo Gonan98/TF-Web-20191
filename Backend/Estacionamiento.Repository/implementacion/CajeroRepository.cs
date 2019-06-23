@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Estacionamiento.Domain;
 using Estacionamiento.Repository.Context;
-
+using Microsoft.EntityFrameworkCore;
 namespace Estacionamiento.Repository.implementacion
 {
     public class CajeroRepository : ICajeroRepository
@@ -82,17 +82,21 @@ namespace Estacionamiento.Repository.implementacion
         {
             try
             {
-                var cajero = context.Cajeros.Single(x => x.Id == entity.Id && entity.FechaIngreso<=DateTime.Today);
+               
+                if ( entity.FechaIngreso<=DateTime.Today)
+                {
+                    var cajero = context.Cajeros.Single(x => x.Id == entity.Id );
+                    cajero.Id = entity.Id;
+                    cajero.NombreCajero = entity.NombreCajero;
+                    cajero.ApellidoCajero = entity.ApellidoCajero;
+                    cajero.FechaIngreso = entity.FechaIngreso;
+                    cajero.TurnoCajero = entity.TurnoCajero;
+                    cajero.PuntoAtencionId = entity.PuntoAtencionId;
 
-                cajero.Id = entity.Id;
-                cajero.NombreCajero = entity.NombreCajero;
-                cajero.ApellidoCajero = entity.ApellidoCajero;
-                cajero.FechaIngreso = entity.FechaIngreso;
-                cajero.TurnoCajero = entity.TurnoCajero;
-                cajero.PuntoAtencionId = entity.PuntoAtencionId;
-
-                context.Update(cajero);
-                context.SaveChanges();
+                    context.Update(cajero);
+                    context.SaveChanges();
+                }
+               
             }
             catch (System.Exception)
             {

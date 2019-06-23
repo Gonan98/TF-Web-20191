@@ -9,7 +9,7 @@ import Ingreso from './components/Ingreso.vue'
 import Localizacion from './components/Localizacion.vue'
 import Tarifa from './components/Tarifa.vue'
 import PuntoAtencion from './components/PuntoAtencion.vue'
-
+import IngresoCliente from './components/IngresoCliente.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -64,6 +64,11 @@ export default new Router({
       path: '/tarifas',
       name: 'tarifas',
       component: Tarifa
+    },
+    {
+      path: '/cliente/ingreso',
+      name: 'clienteingreso',
+      component: IngresoCliente
     }
   ]
 })

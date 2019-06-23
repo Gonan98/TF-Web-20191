@@ -17,7 +17,7 @@ namespace Estacionamiento.Api.Controllers
         [HttpGet]
         public ActionResult GetAll(){
 
-            return Ok(ingresoService.GetAll());
+            return Ok(ingresoService.Getall());
         }
         [HttpPost]
         public ActionResult Post([FromBody]Ingreso ingreso){
@@ -32,7 +32,7 @@ namespace Estacionamiento.Api.Controllers
         [HttpGet("{id}")]
         public ActionResult GetById([FromRoute]int id){
 
-            return Ok(ingresoService.Get(id));
+            return Ok(ingresoService.Getid(id));
         }
         [HttpDelete("{id}")]
         public ActionResult Delete([FromRoute]int id){

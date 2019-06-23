@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using Estacionamiento.Domain;
 using Estacionamiento.Repository.Context;
 using System.Linq;
+using Estacionamiento.Repository.ViewModel;
+using Microsoft.EntityFrameworkCore;
 
 namespace Estacionamiento.Repository.implementacion
 {
@@ -34,32 +36,41 @@ namespace Estacionamiento.Repository.implementacion
 
         public Ingreso Get(int id)
         {
-            var result= new Ingreso();
-            try
-            {
-                result=context.Ingresos.Single(x=>x.Id==id);
-            }
-            catch (System.Exception)
-            {
-                
-                throw;
-            }
-            return result;
+             throw new System.NotImplementedException ();
         }
 
         public IEnumerable<Ingreso> GetAll()
         {
-            var result=new List<Ingreso>();
-            try
-            {
-                result= context.Ingresos.ToList();
-            }
-            catch (System.Exception)
-            {
-                
-                throw;
-            }
-            return result;
+             throw new System.NotImplementedException ();
+        }
+
+        public IEnumerable<IngresoViewModel> Getall()
+        {
+            var ingreso=context.Ingresos.Include(m=>m.Cajero).Include(m=>m.Espacio.Estacionamientos.Localizacion)
+            .Include(m=>m.Tarifa).ToList();
+            return ingreso.Select(o=> new IngresoViewModel{
+                Id=o.Id,
+                ApellidoCajero=o.Cajero.ApellidoCajero,
+                NombreCajero=o.Cajero.NombreCajero,
+                Tarifa=o.Tarifa,
+                HInicio=o.HInicio,
+                Espacio=o.Espacio,
+                Placa=o.Placa
+            });
+        }
+
+        public IngresoViewModel Getid(int id)
+        {
+            var ingreso=context.Ingresos.Single(x=>x.Id==id);
+            return  new IngresoViewModel{
+                Id=ingreso.Id,
+                ApellidoCajero=ingreso.Cajero.ApellidoCajero,
+                NombreCajero=ingreso.Cajero.NombreCajero,
+                Tarifa=ingreso.Tarifa,
+                HInicio=ingreso.HInicio,
+                Espacio=ingreso.Espacio,
+                Placa=ingreso.Placa
+            };
         }
 
         public bool Save(Ingreso entity)
@@ -69,8 +80,9 @@ namespace Estacionamiento.Repository.implementacion
            try
            {
             
-             context.Ingresos.Remove(entity);
-             context.SaveChanges();   
+             context.Ingresos.Add(entity);
+             context.SaveChanges();  
+             rpta=true; 
            }
            catch (System.Exception)
            {

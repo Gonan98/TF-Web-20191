@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\Desktop\\WEB-TF-FINAL\\TF-Web-20191\\Backend\\Estacionamiento.Domain\\Estacionamiento.Domain.csproj": {}
+    "D:\\Enciclopedia\\Universidad\\AppsWeb\\TFinal\\Backend\\Estacionamiento.Domain\\Estacionamiento.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\Desktop\\WEB-TF-FINAL\\TF-Web-20191\\Backend\\Estacionamiento.Domain\\Estacionamiento.Domain.csproj": {
+    "D:\\Enciclopedia\\Universidad\\AppsWeb\\TFinal\\Backend\\Estacionamiento.Domain\\Estacionamiento.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\WEB-TF-FINAL\\TF-Web-20191\\Backend\\Estacionamiento.Domain\\Estacionamiento.Domain.csproj",
+        "projectUniqueName": "D:\\Enciclopedia\\Universidad\\AppsWeb\\TFinal\\Backend\\Estacionamiento.Domain\\Estacionamiento.Domain.csproj",
         "projectName": "Estacionamiento.Domain",
-        "projectPath": "C:\\Users\\user\\Desktop\\WEB-TF-FINAL\\TF-Web-20191\\Backend\\Estacionamiento.Domain\\Estacionamiento.Domain.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\WEB-TF-FINAL\\TF-Web-20191\\Backend\\Estacionamiento.Domain\\obj\\",
+        "projectPath": "D:\\Enciclopedia\\Universidad\\AppsWeb\\TFinal\\Backend\\Estacionamiento.Domain\\Estacionamiento.Domain.csproj",
+        "packagesPath": "C:\\Users\\Jose4\\.nuget\\packages\\",
+        "outputPath": "D:\\Enciclopedia\\Universidad\\AppsWeb\\TFinal\\Backend\\Estacionamiento.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Jose4\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

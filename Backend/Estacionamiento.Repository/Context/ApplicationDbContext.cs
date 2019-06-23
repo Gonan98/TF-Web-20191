@@ -1,5 +1,6 @@
-using Estacionamiento.Domain;
+﻿using Estacionamiento.Domain;
 using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace Estacionamiento.Repository.Context
 {
@@ -32,8 +33,8 @@ namespace Estacionamiento.Repository.Context
 
         );
         modelBuilder.Entity<Cajero>().HasData(
-            new Cajero{Id=1,NombreCajero="PEPE",PuntoAtencionId=1,TurnoCajero="Noche"},
-            new Cajero{Id=2,NombreCajero="LUCHO",PuntoAtencionId=1,TurnoCajero="Tarde"}
+             new Cajero{Id=1,NombreCajero="PEPE",PuntoAtencionId=1,TurnoCajero="Noche",ApellidoCajero="Luis",FechaIngreso=Convert.ToDateTime("2019-06-13")},
+            new Cajero{Id=2,NombreCajero="LUCHO",PuntoAtencionId=1,TurnoCajero="Tarde",ApellidoCajero="Caldas",FechaIngreso=Convert.ToDateTime("2019-06-12")}
 
 
         );
