@@ -4,14 +4,16 @@ using Estacionamiento.Repository.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Estacionamiento.Repository.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20190620172359_segunda")]
+    partial class segunda
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -25,10 +27,6 @@ namespace Estacionamiento.Repository.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("ApellidoCajero");
-
-                    b.Property<DateTime>("FechaIngreso");
-
                     b.Property<string>("NombreCajero");
 
                     b.Property<int>("PuntoAtencionId");
@@ -40,24 +38,6 @@ namespace Estacionamiento.Repository.Migrations
                     b.HasIndex("PuntoAtencionId");
 
                     b.ToTable("Cajeros");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            FechaIngreso = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            NombreCajero = "PEPE",
-                            PuntoAtencionId = 1,
-                            TurnoCajero = "Noche"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            FechaIngreso = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            NombreCajero = "LUCHO",
-                            PuntoAtencionId = 1,
-                            TurnoCajero = "Tarde"
-                        });
                 });
 
             modelBuilder.Entity("Estacionamiento.Domain.Comprobante", b =>
@@ -140,8 +120,6 @@ namespace Estacionamiento.Repository.Migrations
 
                     b.HasIndex("CajeroId");
 
-                    b.HasIndex("EspacioId");
-
                     b.HasIndex("TarifaId");
 
                     b.ToTable("Ingresos");
@@ -171,18 +149,6 @@ namespace Estacionamiento.Repository.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("PuntoAtenciones");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Ubicacion = "Nivel 1"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Ubicacion = "Nivel 2"
-                        });
                 });
 
             modelBuilder.Entity("Estacionamiento.Domain.Tarifa", b =>
@@ -237,11 +203,6 @@ namespace Estacionamiento.Repository.Migrations
                     b.HasOne("Estacionamiento.Domain.Cajero", "Cajero")
                         .WithMany()
                         .HasForeignKey("CajeroId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("Estacionamiento.Domain.Espacio", "Espacio")
-                        .WithMany()
-                        .HasForeignKey("EspacioId")
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("Estacionamiento.Domain.Tarifa", "Tarifa")
