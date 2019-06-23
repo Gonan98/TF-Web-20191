@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Estacionamiento.Repository.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20190621025449_init")]
+    [Migration("20190623050555_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -140,6 +140,8 @@ namespace Estacionamiento.Repository.Migrations
 
                     b.HasIndex("CajeroId");
 
+                    b.HasIndex("EspacioId");
+
                     b.HasIndex("TarifaId");
 
                     b.ToTable("Ingresos");
@@ -235,6 +237,11 @@ namespace Estacionamiento.Repository.Migrations
                     b.HasOne("Estacionamiento.Domain.Cajero", "Cajero")
                         .WithMany()
                         .HasForeignKey("CajeroId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Estacionamiento.Domain.Espacio", "Espacio")
+                        .WithMany()
+                        .HasForeignKey("EspacioId")
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("Estacionamiento.Domain.Tarifa", "Tarifa")

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using Estacionamiento.Domain;
 using Estacionamiento.Repository;
 
@@ -28,7 +29,14 @@ namespace Estacionamiento.Service.implementacion
 
         public bool Save(Localizacion entity)
         {
-            return localizacionRepository.Save(entity);
+            var list=(List<Localizacion>)localizacionRepository.GetAll();
+            var result=list.FirstOrDefault(x=>x.NombreLocalizacion.Trim().ToLower()==entity.NombreLocalizacion.Trim().ToLower());
+            if (result==null)
+            {
+                return localizacionRepository.Save(entity);
+                
+            }
+            return false;
         }
 
         public bool Update(Localizacion entity)

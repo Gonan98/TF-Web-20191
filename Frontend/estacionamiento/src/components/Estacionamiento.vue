@@ -34,7 +34,7 @@
                     <v-text-field v-model="direccion" label="direccion"></v-text-field>
                   </v-flex>
                   <v-flex xs12 sm12 md12>
-                    <v-text-field v-model="localizacionId" label="LocalizacionId"></v-text-field>
+                    <v-text-field v-model="localizacionId" label="Localizacion"></v-text-field>
                   </v-flex>
                 </v-layout>
               </v-container>

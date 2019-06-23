@@ -135,6 +135,12 @@ namespace Estacionamiento.Repository.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
+                        name: "FK_Ingresos_Espacios_EspacioId",
+                        column: x => x.EspacioId,
+                        principalTable: "Espacios",
+                        principalColumn: "EspacioId",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
                         name: "FK_Ingresos_Tarifas_TarifaId",
                         column: x => x.TarifaId,
                         principalTable: "Tarifas",
@@ -209,6 +215,11 @@ namespace Estacionamiento.Repository.Migrations
                 column: "CajeroId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Ingresos_EspacioId",
+                table: "Ingresos",
+                column: "EspacioId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Ingresos_TarifaId",
                 table: "Ingresos",
                 column: "TarifaId");
@@ -220,25 +231,25 @@ namespace Estacionamiento.Repository.Migrations
                 name: "Comprobantes");
 
             migrationBuilder.DropTable(
-                name: "Espacios");
-
-            migrationBuilder.DropTable(
                 name: "Ingresos");
-
-            migrationBuilder.DropTable(
-                name: "estacionamientos");
 
             migrationBuilder.DropTable(
                 name: "Cajeros");
 
             migrationBuilder.DropTable(
+                name: "Espacios");
+
+            migrationBuilder.DropTable(
                 name: "Tarifas");
 
             migrationBuilder.DropTable(
-                name: "Localizaciones");
+                name: "PuntoAtenciones");
 
             migrationBuilder.DropTable(
-                name: "PuntoAtenciones");
+                name: "estacionamientos");
+
+            migrationBuilder.DropTable(
+                name: "Localizaciones");
         }
     }
 }

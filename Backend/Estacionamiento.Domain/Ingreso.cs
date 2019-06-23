@@ -19,6 +19,6 @@ namespace Estacionamiento.Domain
         public string Placa{get;set;}
         public  DateTime HInicio{get;set;}
         public int EspacioId {get; set;}
-        Espacio Espacio {get; set;}
+        public Espacio Espacio {get; set;}
     }
 }

@@ -138,6 +138,8 @@ namespace Estacionamiento.Repository.Migrations
 
                     b.HasIndex("CajeroId");
 
+                    b.HasIndex("EspacioId");
+
                     b.HasIndex("TarifaId");
 
                     b.ToTable("Ingresos");
@@ -233,6 +235,11 @@ namespace Estacionamiento.Repository.Migrations
                     b.HasOne("Estacionamiento.Domain.Cajero", "Cajero")
                         .WithMany()
                         .HasForeignKey("CajeroId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Estacionamiento.Domain.Espacio", "Espacio")
+                        .WithMany()
+                        .HasForeignKey("EspacioId")
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("Estacionamiento.Domain.Tarifa", "Tarifa")
