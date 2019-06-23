@@ -41,7 +41,7 @@ export default new Router({
       component: Espacio
     },
     {
-      path: '/estacionamiento',
+      path: '/estacionamientos',
       name: 'estacionamientos',
       component:  Estacionamiento
     },

@@ -25,6 +25,18 @@ namespace Estacionamiento.Repository.Context
         //Property Configurations
         modelBuilder.Entity<Ingreso>().Property(s => s.Placa).IsRequired();
         modelBuilder.Entity<Ingreso>().Property(s => s.HInicio).IsRequired();
+        modelBuilder.Entity<PuntoAtencion>().HasData(
+            new PuntoAtencion{Id=1,Ubicacion="Nivel 1"},
+            new PuntoAtencion{Id=2,Ubicacion="Nivel 2"}
+
+
+        );
+        modelBuilder.Entity<Cajero>().HasData(
+            new Cajero{Id=1,NombreCajero="PEPE",PuntoAtencionId=1,TurnoCajero="Noche"},
+            new Cajero{Id=2,NombreCajero="LUCHO",PuntoAtencionId=1,TurnoCajero="Tarde"}
+
+
+        );
         }
 
     

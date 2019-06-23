@@ -16,3 +16,21 @@ C:\Users\andre\Desktop\TF-Web-20191\Backend\Estacionamiento.Domain\obj\Debug\net
 C:\Users\andre\Desktop\TF-Web-20191\Backend\Estacionamiento.Domain\obj\Debug\netstandard2.0\Estacionamiento.Domain.AssemblyInfo.cs
 C:\Users\andre\Desktop\TF-Web-20191\Backend\Estacionamiento.Domain\obj\Debug\netstandard2.0\Estacionamiento.Domain.dll
 C:\Users\andre\Desktop\TF-Web-20191\Backend\Estacionamiento.Domain\obj\Debug\netstandard2.0\Estacionamiento.Domain.pdb
+C:\Users\Cesar Gutierrez\Desktop\aplicaciones Web\TRABAJO_FINAL_WEB\estacionamiento_ver8\Backend\Estacionamiento.Domain\bin\Debug\netstandard2.0\Estacionamiento.Domain.deps.json
+C:\Users\Cesar Gutierrez\Desktop\aplicaciones Web\TRABAJO_FINAL_WEB\estacionamiento_ver8\Backend\Estacionamiento.Domain\bin\Debug\netstandard2.0\Estacionamiento.Domain.dll
+C:\Users\Cesar Gutierrez\Desktop\aplicaciones Web\TRABAJO_FINAL_WEB\estacionamiento_ver8\Backend\Estacionamiento.Domain\bin\Debug\netstandard2.0\Estacionamiento.Domain.pdb
+C:\Users\Cesar Gutierrez\Desktop\aplicaciones Web\TRABAJO_FINAL_WEB\estacionamiento_ver8\Backend\Estacionamiento.Domain\obj\Debug\netstandard2.0\Estacionamiento.Domain.csprojAssemblyReference.cache
+C:\Users\Cesar Gutierrez\Desktop\aplicaciones Web\TRABAJO_FINAL_WEB\estacionamiento_ver8\Backend\Estacionamiento.Domain\obj\Debug\netstandard2.0\Estacionamiento.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Cesar Gutierrez\Desktop\aplicaciones Web\TRABAJO_FINAL_WEB\estacionamiento_ver8\Backend\Estacionamiento.Domain\obj\Debug\netstandard2.0\Estacionamiento.Domain.AssemblyInfoInputs.cache
+C:\Users\Cesar Gutierrez\Desktop\aplicaciones Web\TRABAJO_FINAL_WEB\estacionamiento_ver8\Backend\Estacionamiento.Domain\obj\Debug\netstandard2.0\Estacionamiento.Domain.AssemblyInfo.cs
+C:\Users\Cesar Gutierrez\Desktop\aplicaciones Web\TRABAJO_FINAL_WEB\estacionamiento_ver8\Backend\Estacionamiento.Domain\obj\Debug\netstandard2.0\Estacionamiento.Domain.dll
+C:\Users\Cesar Gutierrez\Desktop\aplicaciones Web\TRABAJO_FINAL_WEB\estacionamiento_ver8\Backend\Estacionamiento.Domain\obj\Debug\netstandard2.0\Estacionamiento.Domain.pdb
+C:\Users\0l0\Desktop\TF-Web-20191\Backend\Estacionamiento.Domain\bin\Debug\netstandard2.0\Estacionamiento.Domain.deps.json
+C:\Users\0l0\Desktop\TF-Web-20191\Backend\Estacionamiento.Domain\bin\Debug\netstandard2.0\Estacionamiento.Domain.dll
+C:\Users\0l0\Desktop\TF-Web-20191\Backend\Estacionamiento.Domain\bin\Debug\netstandard2.0\Estacionamiento.Domain.pdb
+C:\Users\0l0\Desktop\TF-Web-20191\Backend\Estacionamiento.Domain\obj\Debug\netstandard2.0\Estacionamiento.Domain.csprojAssemblyReference.cache
+C:\Users\0l0\Desktop\TF-Web-20191\Backend\Estacionamiento.Domain\obj\Debug\netstandard2.0\Estacionamiento.Domain.csproj.CoreCompileInputs.cache
+C:\Users\0l0\Desktop\TF-Web-20191\Backend\Estacionamiento.Domain\obj\Debug\netstandard2.0\Estacionamiento.Domain.AssemblyInfoInputs.cache
+C:\Users\0l0\Desktop\TF-Web-20191\Backend\Estacionamiento.Domain\obj\Debug\netstandard2.0\Estacionamiento.Domain.AssemblyInfo.cs
+C:\Users\0l0\Desktop\TF-Web-20191\Backend\Estacionamiento.Domain\obj\Debug\netstandard2.0\Estacionamiento.Domain.dll
+C:\Users\0l0\Desktop\TF-Web-20191\Backend\Estacionamiento.Domain\obj\Debug\netstandard2.0\Estacionamiento.Domain.pdb

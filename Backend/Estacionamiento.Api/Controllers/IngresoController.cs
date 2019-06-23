@@ -8,6 +8,38 @@ namespace Estacionamiento.Api.Controllers
     [ApiController]
     public class IngresoController:ControllerBase
     {
+        private IIngresoService ingresoService;
+        public IngresoController(IIngresoService ingresoService){
+
+            this.ingresoService=ingresoService;
+        }
+
+        [HttpGet]
+        public ActionResult GetAll(){
+
+            return Ok(ingresoService.GetAll());
+        }
+        [HttpPost]
+        public ActionResult Post([FromBody]Ingreso ingreso){
+
+            return Ok(ingresoService.Save(ingreso));
+        }
+        [HttpPut]
+        public ActionResult Put([FromBody]Ingreso ingreso){
+
+            return Ok(ingresoService.Update(ingreso));
+        }
+        [HttpGet("{id}")]
+        public ActionResult GetById([FromRoute]int id){
+
+            return Ok(ingresoService.Get(id));
+        }
+        [HttpDelete("{id}")]
+        public ActionResult Delete([FromRoute]int id){
+
+            return Ok(ingresoService.Delete(id));
+        }
+
         
     }
 }

@@ -25,6 +25,10 @@ namespace Estacionamiento.Repository.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("ApellidoCajero");
+
+                    b.Property<DateTime>("FechaIngreso");
+
                     b.Property<string>("NombreCajero");
 
                     b.Property<int>("PuntoAtencionId");
@@ -36,6 +40,24 @@ namespace Estacionamiento.Repository.Migrations
                     b.HasIndex("PuntoAtencionId");
 
                     b.ToTable("Cajeros");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            FechaIngreso = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            NombreCajero = "PEPE",
+                            PuntoAtencionId = 1,
+                            TurnoCajero = "Noche"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            FechaIngreso = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            NombreCajero = "LUCHO",
+                            PuntoAtencionId = 1,
+                            TurnoCajero = "Tarde"
+                        });
                 });
 
             modelBuilder.Entity("Estacionamiento.Domain.Comprobante", b =>
@@ -149,6 +171,18 @@ namespace Estacionamiento.Repository.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("PuntoAtenciones");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Ubicacion = "Nivel 1"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Ubicacion = "Nivel 2"
+                        });
                 });
 
             modelBuilder.Entity("Estacionamiento.Domain.Tarifa", b =>

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Estacionamiento.Domain;
 using Estacionamiento.Repository.Context;
@@ -63,8 +64,11 @@ namespace Estacionamiento.Repository.implementacion
         {
             try
             {
-                context.Add(entity);
-                context.SaveChanges();
+                if(entity.FechaIngreso<=DateTime.Today){
+
+                    context.Add(entity);
+                    context.SaveChanges();
+                }
             }
             catch (System.Exception)
             {
@@ -78,10 +82,12 @@ namespace Estacionamiento.Repository.implementacion
         {
             try
             {
-                var cajero = context.Cajeros.Single(x => x.Id == entity.Id);
+                var cajero = context.Cajeros.Single(x => x.Id == entity.Id && entity.FechaIngreso<=DateTime.Today);
 
                 cajero.Id = entity.Id;
                 cajero.NombreCajero = entity.NombreCajero;
+                cajero.ApellidoCajero = entity.ApellidoCajero;
+                cajero.FechaIngreso = entity.FechaIngreso;
                 cajero.TurnoCajero = entity.TurnoCajero;
                 cajero.PuntoAtencionId = entity.PuntoAtencionId;
 

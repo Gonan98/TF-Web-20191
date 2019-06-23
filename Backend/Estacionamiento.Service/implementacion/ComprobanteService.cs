@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Estacionamiento.Domain;
 using Estacionamiento.Repository;
+using Estacionamiento.Repository.ViewModel;
 
 namespace Estacionamiento.Service.implementacion
 {
@@ -23,7 +24,12 @@ namespace Estacionamiento.Service.implementacion
 
         public IEnumerable<Comprobante> GetAll()
         {
-            return comprobanteRepository.GetAll();
+            throw new System.NotImplementedException ();
+        }
+
+        public IEnumerable<ComprobanteViewModel> GetAllComprobantes()
+        {
+            return comprobanteRepository.GetAllComprobantes();
         }
 
         public bool Save(Comprobante entity)

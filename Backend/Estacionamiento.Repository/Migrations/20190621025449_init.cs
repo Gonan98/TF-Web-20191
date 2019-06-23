@@ -14,7 +14,7 @@ namespace Estacionamiento.Repository.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Nombre_Localizacion = table.Column<string>(nullable: true)
+                    NombreLocalizacion = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -76,8 +76,10 @@ namespace Estacionamiento.Repository.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Nombre_Cajero = table.Column<string>(nullable: true),
-                    Turno_Cajero = table.Column<string>(nullable: true),
+                    NombreCajero = table.Column<string>(nullable: true),
+                    ApellidoCajero = table.Column<string>(nullable: true),
+                    FechaIngreso = table.Column<DateTime>(nullable: false),
+                    TurnoCajero = table.Column<string>(nullable: true),
                     PuntoAtencionId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
@@ -144,23 +146,42 @@ namespace Estacionamiento.Repository.Migrations
                 name: "Comprobantes",
                 columns: table => new
                 {
-                    id = table.Column<int>(nullable: false)
+                    Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    ingresoId = table.Column<int>(nullable: false),
-                    horaIni = table.Column<DateTime>(nullable: false),
+                    IngresoId = table.Column<int>(nullable: false),
                     horaFin = table.Column<DateTime>(nullable: false),
-                    monto = table.Column<double>(nullable: false)
+                    Monto = table.Column<double>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Comprobantes", x => x.id);
+                    table.PrimaryKey("PK_Comprobantes", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Comprobantes_Ingresos_ingresoId",
-                        column: x => x.ingresoId,
+                        name: "FK_Comprobantes_Ingresos_IngresoId",
+                        column: x => x.IngresoId,
                         principalTable: "Ingresos",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
+
+            migrationBuilder.InsertData(
+                table: "PuntoAtenciones",
+                columns: new[] { "Id", "Ubicacion" },
+                values: new object[] { 1, "Nivel 1" });
+
+            migrationBuilder.InsertData(
+                table: "PuntoAtenciones",
+                columns: new[] { "Id", "Ubicacion" },
+                values: new object[] { 2, "Nivel 2" });
+
+            migrationBuilder.InsertData(
+                table: "Cajeros",
+                columns: new[] { "Id", "ApellidoCajero", "FechaIngreso", "NombreCajero", "PuntoAtencionId", "TurnoCajero" },
+                values: new object[] { 1, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "PEPE", 1, "Noche" });
+
+            migrationBuilder.InsertData(
+                table: "Cajeros",
+                columns: new[] { "Id", "ApellidoCajero", "FechaIngreso", "NombreCajero", "PuntoAtencionId", "TurnoCajero" },
+                values: new object[] { 2, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "LUCHO", 1, "Tarde" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Cajeros_PuntoAtencionId",
@@ -168,9 +189,9 @@ namespace Estacionamiento.Repository.Migrations
                 column: "PuntoAtencionId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Comprobantes_ingresoId",
+                name: "IX_Comprobantes_IngresoId",
                 table: "Comprobantes",
-                column: "ingresoId");
+                column: "IngresoId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Espacios_EstacionamientosId",

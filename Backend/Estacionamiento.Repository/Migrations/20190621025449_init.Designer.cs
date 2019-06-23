@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Estacionamiento.Repository.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20190615174118_init")]
+    [Migration("20190621025449_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -27,36 +27,56 @@ namespace Estacionamiento.Repository.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Nombre_Cajero");
+                    b.Property<string>("ApellidoCajero");
+
+                    b.Property<DateTime>("FechaIngreso");
+
+                    b.Property<string>("NombreCajero");
 
                     b.Property<int>("PuntoAtencionId");
 
-                    b.Property<string>("Turno_Cajero");
+                    b.Property<string>("TurnoCajero");
 
                     b.HasKey("Id");
 
                     b.HasIndex("PuntoAtencionId");
 
                     b.ToTable("Cajeros");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            FechaIngreso = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            NombreCajero = "PEPE",
+                            PuntoAtencionId = 1,
+                            TurnoCajero = "Noche"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            FechaIngreso = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            NombreCajero = "LUCHO",
+                            PuntoAtencionId = 1,
+                            TurnoCajero = "Tarde"
+                        });
                 });
 
             modelBuilder.Entity("Estacionamiento.Domain.Comprobante", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int>("IngresoId");
+
+                    b.Property<double>("Monto");
+
                     b.Property<DateTime>("horaFin");
 
-                    b.Property<DateTime>("horaIni");
+                    b.HasKey("Id");
 
-                    b.Property<int>("ingresoId");
-
-                    b.Property<double>("monto");
-
-                    b.HasKey("id");
-
-                    b.HasIndex("ingresoId");
+                    b.HasIndex("IngresoId");
 
                     b.ToTable("Comprobantes");
                 });
@@ -131,7 +151,7 @@ namespace Estacionamiento.Repository.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Nombre_Localizacion");
+                    b.Property<string>("NombreLocalizacion");
 
                     b.HasKey("Id");
 
@@ -149,6 +169,18 @@ namespace Estacionamiento.Repository.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("PuntoAtenciones");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Ubicacion = "Nivel 1"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Ubicacion = "Nivel 2"
+                        });
                 });
 
             modelBuilder.Entity("Estacionamiento.Domain.Tarifa", b =>
@@ -168,7 +200,7 @@ namespace Estacionamiento.Repository.Migrations
 
             modelBuilder.Entity("Estacionamiento.Domain.Cajero", b =>
                 {
-                    b.HasOne("Estacionamiento.Domain.PuntoAtencion", "puntoAtencion")
+                    b.HasOne("Estacionamiento.Domain.PuntoAtencion", "PuntoAtencion")
                         .WithMany("Cajeros")
                         .HasForeignKey("PuntoAtencionId")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -178,7 +210,7 @@ namespace Estacionamiento.Repository.Migrations
                 {
                     b.HasOne("Estacionamiento.Domain.Ingreso", "Ingreso")
                         .WithMany()
-                        .HasForeignKey("ingresoId")
+                        .HasForeignKey("IngresoId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 

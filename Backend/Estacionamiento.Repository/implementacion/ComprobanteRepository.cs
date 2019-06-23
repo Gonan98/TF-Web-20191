@@ -2,6 +2,8 @@ using System.Collections.Generic;
 using System.Linq;
 using Estacionamiento.Domain;
 using Estacionamiento.Repository.Context;
+using Estacionamiento.Repository.ViewModel;
+using Microsoft.EntityFrameworkCore;
 
 namespace Estacionamiento.Repository.implementacion
 {
@@ -43,24 +45,41 @@ namespace Estacionamiento.Repository.implementacion
 
         public IEnumerable<Comprobante> GetAll()
         {
-            var result = new List<Comprobante>();
-            try
-            {
-                result = context.Comprobantes.ToList();
-            }
-            catch (System.Exception)
-            {
-                throw;
-            }
-            return result;
+            throw new System.NotImplementedException ();
+        }
+
+        public IEnumerable<ComprobanteViewModel> GetAllComprobantes()
+        {
+            var comprobante = context.Comprobantes
+            .Include(o=>o.Ingreso)
+            .OrderByDescending (o => o.Id)
+            .Take (10)
+            .ToList ();
+
+            return comprobante.Select (o => new ComprobanteViewModel {
+                    Id = o.Id,
+                    IngresoId = o.IngresoId,
+                    Placa = o.Ingreso.Placa,
+                    HInicio = o.Ingreso.HInicio,
+                    horaFin = o.horaFin,
+                    Monto = o.Monto
+            });
         }
 
         public bool Save(Comprobante entity)
         {
             try
             {
-                context.Add(entity);
-                context.SaveChanges();
+                var ingreso=context.Ingresos.Single(x=>x.Id==entity.IngresoId);
+                var tarifa=context.Tarifas.Single(x=>x.TarifaId==ingreso.TarifaId);
+
+                entity.Monto=(entity.horaFin-ingreso.HInicio).Hours*tarifa.Monto;
+
+                if(entity.horaFin>ingreso.HInicio){
+                    context.Add(entity);
+                    context.SaveChanges();
+                }
+                
             }
             catch (System.Exception)
             {
@@ -73,13 +92,17 @@ namespace Estacionamiento.Repository.implementacion
         {
             try
             {
+                var ingreso=context.Ingresos.Single(x=>x.Id==entity.IngresoId);
+                var tarifa=context.Tarifas.Single(x=>x.TarifaId==ingreso.TarifaId);
+
+                entity.Monto=(entity.horaFin-ingreso.HInicio).Hours*tarifa.Monto;
+
                  var comprobanteOrigina = context.Comprobantes.Single(
-                     x => x.Id == entity.Id
+                     x => x.Id == entity.Id && entity.horaFin>ingreso.HInicio
                  );
 
                  comprobanteOrigina.Id=entity.Id;
                  comprobanteOrigina.IngresoId=entity.IngresoId;
-                 comprobanteOrigina.horaIni=entity.horaIni;
                  comprobanteOrigina.horaFin=entity.horaFin;
                  comprobanteOrigina.Monto=entity.Monto;
 
