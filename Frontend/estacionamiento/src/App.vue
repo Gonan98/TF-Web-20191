@@ -77,16 +77,6 @@
                 </v-list-tile-title>
               </v-list-tile-content>
             </v-list-tile>
-            <v-list-tile :to="{ name: 'punto_atenciones'}">
-              <v-list-tile-action>
-                <v-icon>table_chart</v-icon>
-              </v-list-tile-action>
-              <v-list-tile-content>
-                <v-list-tile-title>
-                  Punto de Atencion
-                </v-list-tile-title>
-              </v-list-tile-content>
-            </v-list-tile>
             <v-list-tile :to="{ name: 'ingresos'}">
               <v-list-tile-action>
                 <v-icon>table_chart</v-icon>
@@ -106,7 +96,17 @@
                   Comprobante
                 </v-list-tile-title>
               </v-list-tile-content>
-            </v-list-tile>
+              </v-list-tile>
+            <v-list-tile :to="{ name: 'puntosatencion'}">
+              <v-list-tile-action>
+                <v-icon>table_chart</v-icon>
+              </v-list-tile-action>
+              <v-list-tile-content>
+                <v-list-tile-title>
+                  PuntosAntencion
+                </v-list-tile-title>
+              </v-list-tile-content>
+              </v-list-tile>
 
           </v-list-group>
         </template>

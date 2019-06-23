@@ -68,3 +68,17 @@ C:\Users\Cesar Gutierrez\Desktop\aplicaciones Web\TRABAJO_FINAL_WEB\estacionamie
 C:\Users\Cesar Gutierrez\Desktop\aplicaciones Web\TRABAJO_FINAL_WEB\estacionamiento_ver9\Backend\Estacionamiento.Service\obj\Debug\netstandard2.0\Estacionamiento.Service.csproj.CopyComplete
 C:\Users\Cesar Gutierrez\Desktop\aplicaciones Web\TRABAJO_FINAL_WEB\estacionamiento_ver9\Backend\Estacionamiento.Service\obj\Debug\netstandard2.0\Estacionamiento.Service.dll
 C:\Users\Cesar Gutierrez\Desktop\aplicaciones Web\TRABAJO_FINAL_WEB\estacionamiento_ver9\Backend\Estacionamiento.Service\obj\Debug\netstandard2.0\Estacionamiento.Service.pdb
+C:\Users\user\Desktop\WEB-TF-FINAL\TF-Web-20191\Backend\Estacionamiento.Service\bin\Debug\netstandard2.0\Estacionamiento.Service.deps.json
+C:\Users\user\Desktop\WEB-TF-FINAL\TF-Web-20191\Backend\Estacionamiento.Service\bin\Debug\netstandard2.0\Estacionamiento.Service.dll
+C:\Users\user\Desktop\WEB-TF-FINAL\TF-Web-20191\Backend\Estacionamiento.Service\bin\Debug\netstandard2.0\Estacionamiento.Service.pdb
+C:\Users\user\Desktop\WEB-TF-FINAL\TF-Web-20191\Backend\Estacionamiento.Service\bin\Debug\netstandard2.0\Estacionamiento.Domain.dll
+C:\Users\user\Desktop\WEB-TF-FINAL\TF-Web-20191\Backend\Estacionamiento.Service\bin\Debug\netstandard2.0\Estacionamiento.Repository.dll
+C:\Users\user\Desktop\WEB-TF-FINAL\TF-Web-20191\Backend\Estacionamiento.Service\bin\Debug\netstandard2.0\Estacionamiento.Repository.pdb
+C:\Users\user\Desktop\WEB-TF-FINAL\TF-Web-20191\Backend\Estacionamiento.Service\bin\Debug\netstandard2.0\Estacionamiento.Domain.pdb
+C:\Users\user\Desktop\WEB-TF-FINAL\TF-Web-20191\Backend\Estacionamiento.Service\obj\Debug\netstandard2.0\Estacionamiento.Service.csprojAssemblyReference.cache
+C:\Users\user\Desktop\WEB-TF-FINAL\TF-Web-20191\Backend\Estacionamiento.Service\obj\Debug\netstandard2.0\Estacionamiento.Service.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\WEB-TF-FINAL\TF-Web-20191\Backend\Estacionamiento.Service\obj\Debug\netstandard2.0\Estacionamiento.Service.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\WEB-TF-FINAL\TF-Web-20191\Backend\Estacionamiento.Service\obj\Debug\netstandard2.0\Estacionamiento.Service.AssemblyInfo.cs
+C:\Users\user\Desktop\WEB-TF-FINAL\TF-Web-20191\Backend\Estacionamiento.Service\obj\Debug\netstandard2.0\Estacionamiento.Service.csproj.CopyComplete
+C:\Users\user\Desktop\WEB-TF-FINAL\TF-Web-20191\Backend\Estacionamiento.Service\obj\Debug\netstandard2.0\Estacionamiento.Service.dll
+C:\Users\user\Desktop\WEB-TF-FINAL\TF-Web-20191\Backend\Estacionamiento.Service\obj\Debug\netstandard2.0\Estacionamiento.Service.pdb

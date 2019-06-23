@@ -56,8 +56,8 @@ export default new Router({
       component:  Localizacion
     },
     {
-      path: '/punto_atenciones',
-      name: 'punto_atenciones',
+      path: '/puntosatencion',
+      name: 'puntosatencion',
       component: PuntoAtencion 
     },
     {

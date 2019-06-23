@@ -58,3 +58,15 @@ C:\Users\Cesar Gutierrez\Desktop\aplicaciones Web\TRABAJO_FINAL_WEB\estacionamie
 C:\Users\Cesar Gutierrez\Desktop\aplicaciones Web\TRABAJO_FINAL_WEB\estacionamiento_ver9\Backend\Estacionamiento.Repository\obj\Debug\netstandard2.0\Estacionamiento.Repository.csproj.CopyComplete
 C:\Users\Cesar Gutierrez\Desktop\aplicaciones Web\TRABAJO_FINAL_WEB\estacionamiento_ver9\Backend\Estacionamiento.Repository\obj\Debug\netstandard2.0\Estacionamiento.Repository.dll
 C:\Users\Cesar Gutierrez\Desktop\aplicaciones Web\TRABAJO_FINAL_WEB\estacionamiento_ver9\Backend\Estacionamiento.Repository\obj\Debug\netstandard2.0\Estacionamiento.Repository.pdb
+C:\Users\user\Desktop\WEB-TF-FINAL\TF-Web-20191\Backend\Estacionamiento.Repository\bin\Debug\netstandard2.0\Estacionamiento.Repository.deps.json
+C:\Users\user\Desktop\WEB-TF-FINAL\TF-Web-20191\Backend\Estacionamiento.Repository\bin\Debug\netstandard2.0\Estacionamiento.Repository.dll
+C:\Users\user\Desktop\WEB-TF-FINAL\TF-Web-20191\Backend\Estacionamiento.Repository\bin\Debug\netstandard2.0\Estacionamiento.Repository.pdb
+C:\Users\user\Desktop\WEB-TF-FINAL\TF-Web-20191\Backend\Estacionamiento.Repository\bin\Debug\netstandard2.0\Estacionamiento.Domain.dll
+C:\Users\user\Desktop\WEB-TF-FINAL\TF-Web-20191\Backend\Estacionamiento.Repository\bin\Debug\netstandard2.0\Estacionamiento.Domain.pdb
+C:\Users\user\Desktop\WEB-TF-FINAL\TF-Web-20191\Backend\Estacionamiento.Repository\obj\Debug\netstandard2.0\Estacionamiento.Repository.csprojAssemblyReference.cache
+C:\Users\user\Desktop\WEB-TF-FINAL\TF-Web-20191\Backend\Estacionamiento.Repository\obj\Debug\netstandard2.0\Estacionamiento.Repository.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\WEB-TF-FINAL\TF-Web-20191\Backend\Estacionamiento.Repository\obj\Debug\netstandard2.0\Estacionamiento.Repository.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\WEB-TF-FINAL\TF-Web-20191\Backend\Estacionamiento.Repository\obj\Debug\netstandard2.0\Estacionamiento.Repository.AssemblyInfo.cs
+C:\Users\user\Desktop\WEB-TF-FINAL\TF-Web-20191\Backend\Estacionamiento.Repository\obj\Debug\netstandard2.0\Estacionamiento.Repository.csproj.CopyComplete
+C:\Users\user\Desktop\WEB-TF-FINAL\TF-Web-20191\Backend\Estacionamiento.Repository\obj\Debug\netstandard2.0\Estacionamiento.Repository.dll
+C:\Users\user\Desktop\WEB-TF-FINAL\TF-Web-20191\Backend\Estacionamiento.Repository\obj\Debug\netstandard2.0\Estacionamiento.Repository.pdb
