@@ -208,3 +208,24 @@ D:\Enciclopedia\Universidad\AppsWeb\TFinal2\Backend\Estacionamiento.Api\obj\Debu
 D:\Enciclopedia\Universidad\AppsWeb\TFinal2\Backend\Estacionamiento.Api\obj\Debug\netcoreapp2.2\Estacionamiento.Api.csproj.CopyComplete
 D:\Enciclopedia\Universidad\AppsWeb\TFinal2\Backend\Estacionamiento.Api\obj\Debug\netcoreapp2.2\Estacionamiento.Api.dll
 D:\Enciclopedia\Universidad\AppsWeb\TFinal2\Backend\Estacionamiento.Api\obj\Debug\netcoreapp2.2\Estacionamiento.Api.pdb
+C:\Users\Cesar Gutierrez\Desktop\aplicaciones Web\TRABAJO_FINAL_WEB\estacionamiento_ver13\Backend\Estacionamiento.Api\bin\Debug\netcoreapp2.2\Estacionamiento.Api.deps.json
+C:\Users\Cesar Gutierrez\Desktop\aplicaciones Web\TRABAJO_FINAL_WEB\estacionamiento_ver13\Backend\Estacionamiento.Api\bin\Debug\netcoreapp2.2\Estacionamiento.Api.runtimeconfig.json
+C:\Users\Cesar Gutierrez\Desktop\aplicaciones Web\TRABAJO_FINAL_WEB\estacionamiento_ver13\Backend\Estacionamiento.Api\bin\Debug\netcoreapp2.2\Estacionamiento.Api.runtimeconfig.dev.json
+C:\Users\Cesar Gutierrez\Desktop\aplicaciones Web\TRABAJO_FINAL_WEB\estacionamiento_ver13\Backend\Estacionamiento.Api\bin\Debug\netcoreapp2.2\Estacionamiento.Api.dll
+C:\Users\Cesar Gutierrez\Desktop\aplicaciones Web\TRABAJO_FINAL_WEB\estacionamiento_ver13\Backend\Estacionamiento.Api\bin\Debug\netcoreapp2.2\Estacionamiento.Api.pdb
+C:\Users\Cesar Gutierrez\Desktop\aplicaciones Web\TRABAJO_FINAL_WEB\estacionamiento_ver13\Backend\Estacionamiento.Api\bin\Debug\netcoreapp2.2\Estacionamiento.Domain.dll
+C:\Users\Cesar Gutierrez\Desktop\aplicaciones Web\TRABAJO_FINAL_WEB\estacionamiento_ver13\Backend\Estacionamiento.Api\bin\Debug\netcoreapp2.2\Estacionamiento.Repository.dll
+C:\Users\Cesar Gutierrez\Desktop\aplicaciones Web\TRABAJO_FINAL_WEB\estacionamiento_ver13\Backend\Estacionamiento.Api\bin\Debug\netcoreapp2.2\Estacionamiento.Service.dll
+C:\Users\Cesar Gutierrez\Desktop\aplicaciones Web\TRABAJO_FINAL_WEB\estacionamiento_ver13\Backend\Estacionamiento.Api\bin\Debug\netcoreapp2.2\Estacionamiento.Domain.pdb
+C:\Users\Cesar Gutierrez\Desktop\aplicaciones Web\TRABAJO_FINAL_WEB\estacionamiento_ver13\Backend\Estacionamiento.Api\bin\Debug\netcoreapp2.2\Estacionamiento.Service.pdb
+C:\Users\Cesar Gutierrez\Desktop\aplicaciones Web\TRABAJO_FINAL_WEB\estacionamiento_ver13\Backend\Estacionamiento.Api\bin\Debug\netcoreapp2.2\Estacionamiento.Repository.pdb
+C:\Users\Cesar Gutierrez\Desktop\aplicaciones Web\TRABAJO_FINAL_WEB\estacionamiento_ver13\Backend\Estacionamiento.Api\obj\Debug\netcoreapp2.2\Estacionamiento.Api.csprojAssemblyReference.cache
+C:\Users\Cesar Gutierrez\Desktop\aplicaciones Web\TRABAJO_FINAL_WEB\estacionamiento_ver13\Backend\Estacionamiento.Api\obj\Debug\netcoreapp2.2\Estacionamiento.Api.csproj.CoreCompileInputs.cache
+C:\Users\Cesar Gutierrez\Desktop\aplicaciones Web\TRABAJO_FINAL_WEB\estacionamiento_ver13\Backend\Estacionamiento.Api\obj\Debug\netcoreapp2.2\Estacionamiento.Api.RazorAssemblyInfo.cache
+C:\Users\Cesar Gutierrez\Desktop\aplicaciones Web\TRABAJO_FINAL_WEB\estacionamiento_ver13\Backend\Estacionamiento.Api\obj\Debug\netcoreapp2.2\Estacionamiento.Api.RazorAssemblyInfo.cs
+C:\Users\Cesar Gutierrez\Desktop\aplicaciones Web\TRABAJO_FINAL_WEB\estacionamiento_ver13\Backend\Estacionamiento.Api\obj\Debug\netcoreapp2.2\Estacionamiento.Api.AssemblyInfoInputs.cache
+C:\Users\Cesar Gutierrez\Desktop\aplicaciones Web\TRABAJO_FINAL_WEB\estacionamiento_ver13\Backend\Estacionamiento.Api\obj\Debug\netcoreapp2.2\Estacionamiento.Api.AssemblyInfo.cs
+C:\Users\Cesar Gutierrez\Desktop\aplicaciones Web\TRABAJO_FINAL_WEB\estacionamiento_ver13\Backend\Estacionamiento.Api\obj\Debug\netcoreapp2.2\Estacionamiento.Api.RazorTargetAssemblyInfo.cache
+C:\Users\Cesar Gutierrez\Desktop\aplicaciones Web\TRABAJO_FINAL_WEB\estacionamiento_ver13\Backend\Estacionamiento.Api\obj\Debug\netcoreapp2.2\Estacionamiento.Api.csproj.CopyComplete
+C:\Users\Cesar Gutierrez\Desktop\aplicaciones Web\TRABAJO_FINAL_WEB\estacionamiento_ver13\Backend\Estacionamiento.Api\obj\Debug\netcoreapp2.2\Estacionamiento.Api.dll
+C:\Users\Cesar Gutierrez\Desktop\aplicaciones Web\TRABAJO_FINAL_WEB\estacionamiento_ver13\Backend\Estacionamiento.Api\obj\Debug\netcoreapp2.2\Estacionamiento.Api.pdb

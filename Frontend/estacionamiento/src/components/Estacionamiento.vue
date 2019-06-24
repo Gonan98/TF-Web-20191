@@ -16,14 +16,15 @@
         <v-spacer></v-spacer>
         <v-dialog v-model="dialog" max-width="500px">
           <v-btn slot="activator" color="primary" dark class="mb-2">Nuevo</v-btn>
-           <v-card>
+          <v-card>
             <v-card-title>
-              <span class="headline">Nuevo Ingreso</span>
+              <span class="headline">{{ formTitle }}</span>
             </v-card-title>
 
             <v-card-text>
-              <v-form ref="form">
-                <v-flex xs12 sm12 md12>
+              <v-container grid-list-md>
+                <v-layout wrap>
+                  <v-flex xs12 sm12 md12>
                     <v-text-field v-model="nombre_Estacionamiento" label="nombre_Estacionamiento"></v-text-field>
                   </v-flex>
                   <v-flex xs12 sm12 md12>
@@ -32,28 +33,33 @@
                   <v-flex xs12 sm12 md12>
                     <v-text-field v-model="direccion" label="direccion"></v-text-field>
                   </v-flex>
-                <v-select v-model="localizacionId" :items="localizaciones" :rules="[v => !!v || 'Escoga una localizacion']" label="Localizacion"></v-select>
-              </v-form>
+                  <v-flex xs12 sm12 md12>
+                   <v-select v-model="localizacionSelect" :items="localizaciones" label="localizacion">
+                    </v-select>
+                  </v-flex>
+                </v-layout>
+              </v-container>
             </v-card-text>
+
             <v-card-actions>
               <v-spacer></v-spacer>
               <v-btn color="blue darken-1" flat @click.native="close">Cancelar</v-btn>
               <v-btn color="blue darken-1" flat @click.native="guardar">Guardar</v-btn>
             </v-card-actions>
           </v-card>
-
         </v-dialog>
       </v-toolbar>
       <v-data-table :headers="headers" :items="estacionamientos" :search="search" class="elevation-1">
         <template slot="items" slot-scope="props">
           <td class="justify-center layout px-0">
-            <v-icon small class="mr-2" @click="editItem(props.item)">edit</v-icon>
-          
+             <v-icon small class="mr-2" @click="eliminar(estacionamientos,props.item)">delete</v-icon>
+            
+           <v-icon small class="mr-2" @click="editItem(props.item)">edit</v-icon>
           </td>
           <td>{{ props.item.nombre_Estacionamiento }}</td>
           <td>{{ props.item.numero_Espacios }}</td>
           <td>{{ props.item.direccion }}</td>
-          <td>{{ props.item.localizacion.nombreLocalizacion }}</td>
+          <td>{{ props.item.localizacionId }}</td>
         </template>
         <template slot="no-data">
           <v-btn color="primary" @click="listar">Resetear</v-btn>
@@ -61,6 +67,7 @@
       </v-data-table>
     </v-flex>
   </v-layout>
+
 </template>
 <script>
 import axios from "axios";
@@ -75,7 +82,7 @@ export default {
         { text: "nombre_Estacionamiento", value: "nombre_Estacionamiento", sortable: false },
         { text: "numero_Espacios", value: "numero_Espacios", sortable: false },
         { text: "direccion", value: "direccion" },
-        { text: "nombreLocalizacion", value: "nombreLocalizacion",sortable: false}
+        { text: "localizacion", value: "localizacionId" }
       ],
       search: "",
       editedIndex: -1,
@@ -85,7 +92,7 @@ export default {
       nombre_Estacionamiento: "",
       numero_Espacios: "", 
       direccion: "",
-      localizacionId: ""
+      localizacionSelect: ""
     };
   },
   computed: {
@@ -102,7 +109,7 @@ export default {
 
   created() {
     this.listar();
-    this.loadLocalizaciones();
+     this.loadLocalizaciones();
   },
   methods: {
     listar() {
@@ -118,17 +125,17 @@ export default {
         });
     },
 
-      loadLocalizaciones(){
+     loadLocalizaciones(){
       let me =this;
       var aux=[];
         axios.get("api/Localizacion").then(function(response){
-          me.localizaciones
+         console.log(response);
           aux=response.data;
           aux.map((t)=>{
             me.localizaciones.push(
               {
-                text:t.nombreLocalizacion,
-                value:t.localizacionId
+                 text:t.nombreLocalizacion,
+                value:t.id
               }
             )
           });
@@ -136,6 +143,12 @@ export default {
         console.log(error);
       })
     },
+    eliminar(arr, item) {
+            var i = arr.indexOf(item);
+            if (i !== -1) {
+                arr.splice(i, 1);
+            }
+        },
 
 
 
@@ -145,7 +158,7 @@ export default {
       this.nombre_Estacionamiento=item.nombre_Estacionamiento;
       this.numero_Espacios=item.numero_Espacios;
       this.direccion=item.direccion;
-      this.localizacion=item.localizacion;
+      this.localizacionId=item.localizacionId;
   
       this.editedIndex = 1;
       this.dialog = true;
@@ -163,6 +176,7 @@ export default {
       this.direccion= "";
       this.localizacionId= "";
     },
+
     guardar() {
       if (this.editedIndex > -1) {
         //Código para editar
@@ -174,7 +188,7 @@ export default {
             nombre_Estacionamiento: me.nombre_Estacionamiento,
             numero_Espacios: me.numero_Espacios,
             direccion: me.direccion,
-            localizacionId:me.localizacionId,
+            localizacionId:me.localizacionId
     
           })
           .then(function(response) {
@@ -185,7 +199,7 @@ export default {
           .catch(function(error) {
             console.log(error);
           });
-      } else if (this.$refs.form.validate()) {
+      } else {
         //Código para guardar
         let me = this;
         axios
@@ -193,10 +207,9 @@ export default {
             nombre_Estacionamiento: me.nombre_Estacionamiento,
             numero_Espacios: me.numero_Espacios,
             direccion: me.direccion,
-            localizacionId:me.localizacionId,
+            localizacionId:me.localizacionSelect
           })
           .then(function(response) {
-            this.$refs.form.reset();
             me.close();
             me.listar();
             me.limpiar();
@@ -205,10 +218,7 @@ export default {
             console.log(error);
           });
       }
-    }
-
-    
-
+    },
   }
 };
 </script>
