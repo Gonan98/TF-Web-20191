@@ -45,6 +45,7 @@
       <v-data-table :headers="headers" :items="tarifas" :search="search" class="elevation-1">
         <template slot="items" slot-scope="props">
           <td class="justify-center layout px-0">
+            <v-icon small class="mr-2" @click="deleteItem(props.item.id)">delete</v-icon>
             <v-icon small class="mr-2" @click="editItem(props.item)">edit</v-icon>
           
           </td>
@@ -74,7 +75,7 @@ export default {
       editedIndex: -1,
 
       //Model
-      id: "",
+      tarifaId: "",
       monto: "",
       tipoVehiculo: ""
     };
@@ -108,11 +109,8 @@ export default {
         });
     },
 
-
-
-    
     editItem(item) {
-      this.id = item.id;
+      this.tarifaId = item.tarifaId;
       this.monto = item.monto;
       this.tipoVehiculo = item.tipoVehiculo;
 
@@ -120,13 +118,11 @@ export default {
       this.dialog = true;
     },
 
-  
-
     close() {
       this.dialog = false;
     },
     limpiar() {
-      this.id = "";
+      this.tarifaId = "";
       this.monto = "";
       this.tipoVehiculo = "";
     },
@@ -137,7 +133,7 @@ export default {
         let me = this;
         axios 
           .put("api/tarifa", {
-            id: me.id,
+            tarifaId: me.tarifaId,
             monto: me.monto,
             tipoVehiculo: me.tipoVehiculo
           })
