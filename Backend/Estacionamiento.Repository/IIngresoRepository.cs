@@ -9,5 +9,7 @@ namespace Estacionamiento.Repository
 
         IngresoViewModel Getid(int id);
 
+        IngresoViewModel FindByPlaca(string Placa);
+
     }
 }

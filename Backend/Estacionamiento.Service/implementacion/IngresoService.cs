@@ -10,12 +10,19 @@ namespace Estacionamiento.Service.implementacion
     public class IngresoService : IIngresoService
     {
         private IIngresoRepository ingresorepository;
-        public IngresoService(IIngresoRepository ingresoRepository){
+        private IEspacioRepository espacioRepository;
+        public IngresoService(IIngresoRepository ingresoRepository, IEspacioRepository espacioRepository){
+            this.espacioRepository=espacioRepository;
             this.ingresorepository=ingresoRepository;
         }
         public bool Delete(int id)
         {
            return ingresorepository.Delete(id);
+        }
+
+        public IngresoViewModel FindByPlaca(string Placa)
+        {
+            return ingresorepository.FindByPlaca(Placa);
         }
 
         public Ingreso Get(int id)
@@ -41,15 +48,27 @@ namespace Estacionamiento.Service.implementacion
         public bool Save(Ingreso entity)
         {
         
+
             entity.HInicio= DateTime.Now;
             var list=ingresorepository.Getall();
-            
-            var result=list.FirstOrDefault(x=>x.Placa.Trim().ToLower()==entity.Placa.Trim().ToLower());
-            if (result==null)
+            try
             {
+            var espacio=espacioRepository.Get(entity.EspacioId);
+            var result=list.FirstOrDefault(x=>x.Placa.Trim().ToLower()==entity.Placa.Trim().ToLower());
+            if (result==null && espacio!=null && espacio.Disponible )
+            {
+                espacio.Disponible=false;
+                espacioRepository.Update(espacio);
             return ingresorepository.Save(entity);
                 
             }
+            }
+            catch (System.Exception)
+            {
+                
+                throw;
+            }
+            
             return false;
             
         }

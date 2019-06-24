@@ -278,7 +278,7 @@ export default {
             espacioId:me.espacioId,
           })
           .then(function(response) {
-            this.$refs.form.reset();
+            me.$refs.form.reset();
             me.close();
             me.listar();
             this.limpiar();

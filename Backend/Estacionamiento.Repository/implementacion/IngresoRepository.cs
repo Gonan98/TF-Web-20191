@@ -34,6 +34,24 @@ namespace Estacionamiento.Repository.implementacion
            return rpta;
         }
 
+        public IngresoViewModel FindByPlaca(string Placa)
+        {
+            var ingreso = context.Ingresos.Include(m=>m.Tarifa).Include(m=>m.Espacio).
+            SingleOrDefault(x=>x.Placa.Trim().ToLower()==Placa.Trim().ToLower());
+            
+            var dto=new IngresoViewModel{
+                    Id=ingreso.Id,
+                    ApellidoCajero="",
+                    NombreCajero="",
+                    Espacio=ingreso.Espacio,
+                    Tarifa=ingreso.Tarifa,
+                    Placa=ingreso.Placa,
+                    HInicio=ingreso.HInicio
+            };
+            return dto;
+            
+        }
+
         public Ingreso Get(int id)
         {
              throw new System.NotImplementedException ();

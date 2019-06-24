@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Estacionamiento.Domain;
 using Estacionamiento.Repository.Context;
-
+using Microsoft.EntityFrameworkCore;
 namespace Estacionamiento.Repository.implementacion
 {
     public class EstacionamientoRepository : IEstacionamientoRepository
@@ -41,6 +41,8 @@ namespace Estacionamiento.Repository.implementacion
             var result = new List<Estacionamientos>();
             try
             {
+                
+
                 result = context.estacionamientos.ToList();
             }
 

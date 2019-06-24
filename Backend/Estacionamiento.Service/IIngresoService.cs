@@ -9,5 +9,7 @@ namespace Estacionamiento.Service
         IEnumerable <IngresoViewModel> Getall ();
 
         IngresoViewModel Getid(int id);  
+
+        IngresoViewModel FindByPlaca(string Placa);
     }
 }

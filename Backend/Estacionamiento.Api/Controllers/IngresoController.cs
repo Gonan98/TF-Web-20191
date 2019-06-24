@@ -34,6 +34,13 @@ namespace Estacionamiento.Api.Controllers
 
             return Ok(ingresoService.Getid(id));
         }
+        
+        [HttpGet("placa/{codigo}")]
+        public ActionResult FindByPlaca([FromRoute]string codigo){
+
+            return Ok(ingresoService.FindByPlaca(codigo));
+        }
+
         [HttpDelete("{id}")]
         public ActionResult Delete([FromRoute]int id){
 

@@ -120,6 +120,27 @@
             </v-list-tile>
             
           </v-list-group>
+          <v-list-group>
+            <v-list-tile slot="activator">
+              <v-list-tile-content>
+                <v-list-tile-title>
+                  Cliente
+                </v-list-tile-title>
+              </v-list-tile-content>
+            </v-list-tile>
+            <v-list-tile :to="{ name: 'clienteingreso'}">
+              <v-list-tile-action>
+                <v-icon>table_chart</v-icon>
+              </v-list-tile-action>
+              <v-list-tile-content>
+                <v-list-tile-title>
+                  Buscar Vehiculo
+                </v-list-tile-title>
+              </v-list-tile-content>
+            </v-list-tile>
+            
+          </v-list-group>
+
         </template>
         
        
