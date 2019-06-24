@@ -70,15 +70,9 @@ namespace Estacionamiento.Repository.implementacion
         {
             try
             {
-                var ingreso=context.Ingresos.Single(x=>x.Id==entity.IngresoId);
-                var tarifa=context.Tarifas.Single(x=>x.TarifaId==ingreso.TarifaId);
-
-                entity.Monto=(entity.horaFin-ingreso.HInicio).Hours*tarifa.Monto;
-
-                if(entity.horaFin>ingreso.HInicio){
-                    context.Add(entity);
-                    context.SaveChanges();
-                }
+                context.Add(entity);
+                context.SaveChanges();
+         
                 
             }
             catch (System.Exception)
@@ -92,14 +86,10 @@ namespace Estacionamiento.Repository.implementacion
         {
             try
             {
-                var ingreso=context.Ingresos.Single(x=>x.Id==entity.IngresoId);
-                var tarifa=context.Tarifas.Single(x=>x.TarifaId==ingreso.TarifaId);
-
-                entity.Monto=(entity.horaFin-ingreso.HInicio).Hours*tarifa.Monto;
+       
 
                  var comprobanteOrigina = context.Comprobantes.Single(
-                     x => x.Id == entity.Id && entity.horaFin>ingreso.HInicio
-                 );
+                     x => x.Id == entity.Id );
 
                  comprobanteOrigina.Id=entity.Id;
                  comprobanteOrigina.IngresoId=entity.IngresoId;

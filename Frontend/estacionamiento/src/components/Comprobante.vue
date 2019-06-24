@@ -30,9 +30,6 @@
                     <v-select v-model="ingresoId" :items="ingresos" label="Placa Ingreso">
                     </v-select>
                   </v-flex>
-                  <v-flex xs12 sm12 md12>
-                    <v-text-field v-model="horaFin" label="Hora final"></v-text-field>
-                  </v-flex>
                 </v-layout>
               </v-container>
             </v-card-text>
@@ -54,9 +51,9 @@
           </td>
           <td>{{ props.item.ingresoId }}</td>
           <td>{{ props.item.placa }}</td>
-          <td>{{ props.item.hInicio }}</td>
-          <td>{{ props.item.horaFin }}</td>
-          <td>{{ props.item.monto }}</td>
+          <td>{{ timeI(props.item) }}</td>
+          <td>{{ timeF(props.item) }}</td>
+          <td>{{ 'S/.'+props.item.monto }}</td>
         </template>
         <template slot="no-data">
           <v-btn color="primary" @click="listar">Resetear</v-btn>
@@ -141,7 +138,18 @@ export default {
             });
         },
 
-    
+      timeI(item){
+        var fecha=new Date(item.hInicio);
+        return fecha.getFullYear()+"-"+fecha.getMonth()+"-"+fecha.getDate()+" "+fecha.getHours()+":"
+        +fecha.getMinutes();
+      },
+
+      timeF(item){
+        var fecha=new Date(item.horaFin);
+        return fecha.getFullYear()+"-"+fecha.getMonth()+"-"+fecha.getDate()+" "+fecha.getHours()+":"
+        +fecha.getMinutes();
+      },
+
       editItem(item) {
         this.id = item.id;
         this.horaFin=item.horaFin;
@@ -166,33 +174,33 @@ export default {
       this.horaFin = "";
       this.monto = 0.;
     },
-    guardar() {
+     guardar() {
         if (this.editedIndex > -1) {
         //Código para editar
 
-         let me = this;
-         axios 
-           .put("api/comprobante", {
-            id: me.id,
-            horaFin: me.horaFin,
-            ingresoId: me.ingresoId
-           })
-           .then(function(response) {
-             me.close();
-             me.listar();
-             me.limpiar();
-             //me.alert=true;
-           })
-           .catch(function(error) {
-             console.log(error);
-             //me.error=true;
-           });
+          let me = this;
+          axios 
+            .put("api/comprobante", {
+             id: me.id,
+             horaFin: me.horaFin,
+             ingresoId: me.ingresoId
+            })
+            .then(function(response) {
+              me.close();
+              me.listar();
+              me.limpiar();
+              //me.alert=true;
+            })
+            .catch(function(error) {
+              console.log(error);
+              //me.error=true;
+            });
       } else {
         let me = this;
             axios
             .post("api/comprobante", {
                 ingresoId: me.ingresoId,
-                horaFin: me.horaFin,
+                //horaFin: me.horaFin,
                 monto: me.monto
             })
             .then(function(response) {
@@ -208,20 +216,5 @@ export default {
         }
         }
     },
-    // delete() {
-    //      let me = this;
-    //      axios 
-    //        .delete("api/cajero"+me.id ,{
-    //          id: me.id
-    //        })
-    //        .then(function(response) {
-    //          me.listar();
-    //          //me.alert=true;
-    //        })
-    //        .catch(function(error) {
-    //          console.log(error);
-    //          //me.error=true;
-    //        });
-    // }
 };
 </script> 

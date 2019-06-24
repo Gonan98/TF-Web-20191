@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Estacionamiento.Domain;
 using Estacionamiento.Repository;
+using System;
 
 namespace Estacionamiento.Service.implementacion
 {
@@ -29,6 +30,7 @@ namespace Estacionamiento.Service.implementacion
 
         public bool Save(Cajero entity)
         {
+           entity.FechaIngreso=DateTime.Now;
             return cajeroRepository.Save(entity);
         }
 

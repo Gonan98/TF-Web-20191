@@ -33,9 +33,6 @@
                     <v-text-field v-model="apellidoCajero" label="Apellido"></v-text-field>
                   </v-flex>
                   <v-flex xs12 sm12 md12>
-                    <v-text-field v-model="fechaIngreso" label="Fecha Ingreso"></v-text-field>
-                  </v-flex>
-                  <v-flex xs12 sm12 md12>
                     <v-select v-model="turnoCajero" :items="metodosCajero" label="Turno">
                     </v-select>
                   </v-flex>
@@ -59,12 +56,12 @@
         <template slot="items" slot-scope="props">
           <td class="justify-center layout px-0">
             <v-icon small class="mr-2" @click="editItem(props.item)">edit</v-icon>
-            <!--<v-icon small class="mr-2" @click="deleteItem(props.item.id)">delete</v-icon>-->
+            <v-icon small class="mr-2" @click="deletea()">delete</v-icon>
           
           </td>
           <td>{{ props.item.nombreCajero }}</td>
           <td>{{ props.item.apellidoCajero }}</td>
-          <td>{{ props.item.fechaIngreso }}</td>
+          <td>{{ timeI(props.item) }}</td>
           <td>{{ props.item.turnoCajero }}</td>
           <td>{{ props.item.puntoAtencionId }}</td>
         </template>
@@ -96,7 +93,7 @@ export default {
       puntos: [],
 
       //Model
-      id: "",
+      id:'',
       nombreCajero: '',
       apellidoCajero: '',
       fechaIngreso: '',
@@ -135,6 +132,12 @@ export default {
         });
     },
 
+    timeI(item){
+      var fecha=new Date(item.fechaIngreso);
+      return fecha.getFullYear()+"-"+fecha.getMonth()+"-"+fecha.getDate()+" "+fecha.getHours()+":"
+      +fecha.getMinutes();
+    },
+
     listarPuntoAtencion() {
             let me = this;
             var puntoArray = [];
@@ -165,8 +168,8 @@ export default {
        this.dialog = true;
      },
 
-    // deleteItem(item){
-    //   this.id=item.id;
+    //  deleteItem(item){
+    //    this.id=item.id;
     // },
 
     close() {
@@ -211,7 +214,7 @@ export default {
           .post("api/cajero", {
             nombreCajero: me.nombreCajero,
             apellidoCajero: me.apellidoCajero,
-            fechaIngreso: me.fechaIngreso,
+            //fechaIngreso: me.fechaIngreso,
             turnoCajero: me.turnoCajero,
             puntoAtencionId: me.puntoAtencionId
           })
@@ -227,21 +230,21 @@ export default {
           });
       }
     },
-    // delete() {
-    //      let me = this;
-    //      axios 
-    //        .delete("api/cajero"+me.id ,{
-    //          id: me.id
-    //        })
-    //        .then(function(response) {
-    //          me.listar();
-    //          //me.alert=true;
-    //        })
-    //        .catch(function(error) {
-    //          console.log(error);
-    //          //me.error=true;
-    //        });
-    // }
+    //  deletea() {
+    //       let me = this;
+    //       axios 
+    //         .delete("api/cajero"+me.id ,{
+    //           id: me.id
+    //         })
+    //         .then(function(response) {
+    //           me.listar();
+    //           //me.alert=true;
+    //         })
+    //         .catch(function(error) {
+    //           console.log(error);
+    //           //me.error=true;
+    //         });
+    //  }
   }
 };
 </script> 

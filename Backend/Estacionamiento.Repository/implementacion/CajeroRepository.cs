@@ -64,11 +64,9 @@ namespace Estacionamiento.Repository.implementacion
         {
             try
             {
-                if(entity.FechaIngreso<=DateTime.Today){
-
-                    context.Add(entity);
-                    context.SaveChanges();
-                }
+                context.Add(entity);
+                context.SaveChanges();
+              
             }
             catch (System.Exception)
             {
