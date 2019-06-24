@@ -32,7 +32,7 @@ namespace Estacionamiento.Api.Controllers
         [HttpGet("{id}")]
         public ActionResult GetById([FromRoute]int id){
 
-            return Ok(ingresoService.Getid(id));
+            return Ok(ingresoService.Get(id));
         }
         
         [HttpGet("placa/{codigo}")]

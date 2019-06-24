@@ -8,7 +8,7 @@
     >
       <v-list dense>
         <template>
-          <v-list-tile :to="{name:'home'}">
+          <v-list-tile :to="{name:'index'}">
             <v-list-tile-action>
               <v-icon>home</v-icon>
             </v-list-tile-action>
@@ -78,16 +78,7 @@
               </v-list-tile-content>
             </v-list-tile>
             
-            <v-list-tile :to="{ name: 'comprobantes'}">
-              <v-list-tile-action>
-                <v-icon>table_chart</v-icon>
-              </v-list-tile-action>
-              <v-list-tile-content>
-                <v-list-tile-title>
-                  Comprobante
-                </v-list-tile-title>
-              </v-list-tile-content>
-              </v-list-tile>
+            
             <v-list-tile :to="{ name: 'puntosatencion'}">
               <v-list-tile-action>
                 <v-icon>table_chart</v-icon>
@@ -118,7 +109,16 @@
                 </v-list-tile-title>
               </v-list-tile-content>
             </v-list-tile>
-            
+            <v-list-tile :to="{ name: 'comprobantes'}">
+              <v-list-tile-action>
+                <v-icon>table_chart</v-icon>
+              </v-list-tile-action>
+              <v-list-tile-content>
+                <v-list-tile-title>
+                  Comprobante
+                </v-list-tile-title>
+              </v-list-tile-content>
+              </v-list-tile>
           </v-list-group>
           <v-list-group>
             <v-list-tile slot="activator">

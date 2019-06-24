@@ -27,7 +27,7 @@ namespace Estacionamiento.Service.implementacion
 
         public Ingreso Get(int id)
         {
-             throw new System.NotImplementedException ();
+             return ingresorepository.Get(id);
         }
 
         public IEnumerable<Ingreso> GetAll()
@@ -54,8 +54,8 @@ namespace Estacionamiento.Service.implementacion
             try
             {
             var espacio=espacioRepository.Get(entity.EspacioId);
-            var result=list.FirstOrDefault(x=>x.Placa.Trim().ToLower()==entity.Placa.Trim().ToLower());
-            if (result==null && espacio!=null && espacio.Disponible )
+            
+            if (espacio!=null && espacio.Disponible )
             {
                 espacio.Disponible=false;
                 espacioRepository.Update(espacio);

@@ -41,8 +41,8 @@
       </v-toolbar>
       <v-data-table :headers="headers" :items="ingresos" :search="search"  class="elevation-1">
         <template slot="items" slot-scope="props">
-          <td class="justify-center layout px-0">
-            <v-icon small class="mr-2" @click="editItem(props.item)">edit</v-icon>
+          <td class="justify-center layout px-0 pt-3">
+            <v-icon small  @click="editItem(props.item)">edit</v-icon>
           
           </td>
           <td>{{ props.item.espacio.espacioId }}</td>

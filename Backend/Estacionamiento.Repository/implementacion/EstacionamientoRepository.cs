@@ -24,7 +24,7 @@ namespace Estacionamiento.Repository.implementacion
             var result = new Estacionamientos();
             try
             {
-                result = context.estacionamientos.Single(x => x.Id == id);
+                result = context.estacionamientos.Include(x=>x.espacios).Single(x => x.Id == id);
                 
             }
 

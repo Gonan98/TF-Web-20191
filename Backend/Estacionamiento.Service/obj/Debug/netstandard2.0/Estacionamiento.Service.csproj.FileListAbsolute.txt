@@ -124,3 +124,17 @@ C:\Users\0l0\Desktop\TFCC\TF-Web-20191\Backend\Estacionamiento.Service\obj\Debug
 C:\Users\0l0\Desktop\TFCC\TF-Web-20191\Backend\Estacionamiento.Service\obj\Debug\netstandard2.0\Estacionamiento.Service.csproj.CopyComplete
 C:\Users\0l0\Desktop\TFCC\TF-Web-20191\Backend\Estacionamiento.Service\obj\Debug\netstandard2.0\Estacionamiento.Service.dll
 C:\Users\0l0\Desktop\TFCC\TF-Web-20191\Backend\Estacionamiento.Service\obj\Debug\netstandard2.0\Estacionamiento.Service.pdb
+D:\Enciclopedia\Universidad\AppsWeb\TFinal2\Backend\Estacionamiento.Service\bin\Debug\netstandard2.0\Estacionamiento.Service.deps.json
+D:\Enciclopedia\Universidad\AppsWeb\TFinal2\Backend\Estacionamiento.Service\bin\Debug\netstandard2.0\Estacionamiento.Service.dll
+D:\Enciclopedia\Universidad\AppsWeb\TFinal2\Backend\Estacionamiento.Service\bin\Debug\netstandard2.0\Estacionamiento.Service.pdb
+D:\Enciclopedia\Universidad\AppsWeb\TFinal2\Backend\Estacionamiento.Service\bin\Debug\netstandard2.0\Estacionamiento.Domain.dll
+D:\Enciclopedia\Universidad\AppsWeb\TFinal2\Backend\Estacionamiento.Service\bin\Debug\netstandard2.0\Estacionamiento.Repository.dll
+D:\Enciclopedia\Universidad\AppsWeb\TFinal2\Backend\Estacionamiento.Service\bin\Debug\netstandard2.0\Estacionamiento.Repository.pdb
+D:\Enciclopedia\Universidad\AppsWeb\TFinal2\Backend\Estacionamiento.Service\bin\Debug\netstandard2.0\Estacionamiento.Domain.pdb
+D:\Enciclopedia\Universidad\AppsWeb\TFinal2\Backend\Estacionamiento.Service\obj\Debug\netstandard2.0\Estacionamiento.Service.csprojAssemblyReference.cache
+D:\Enciclopedia\Universidad\AppsWeb\TFinal2\Backend\Estacionamiento.Service\obj\Debug\netstandard2.0\Estacionamiento.Service.csproj.CoreCompileInputs.cache
+D:\Enciclopedia\Universidad\AppsWeb\TFinal2\Backend\Estacionamiento.Service\obj\Debug\netstandard2.0\Estacionamiento.Service.AssemblyInfoInputs.cache
+D:\Enciclopedia\Universidad\AppsWeb\TFinal2\Backend\Estacionamiento.Service\obj\Debug\netstandard2.0\Estacionamiento.Service.AssemblyInfo.cs
+D:\Enciclopedia\Universidad\AppsWeb\TFinal2\Backend\Estacionamiento.Service\obj\Debug\netstandard2.0\Estacionamiento.Service.csproj.CopyComplete
+D:\Enciclopedia\Universidad\AppsWeb\TFinal2\Backend\Estacionamiento.Service\obj\Debug\netstandard2.0\Estacionamiento.Service.dll
+D:\Enciclopedia\Universidad\AppsWeb\TFinal2\Backend\Estacionamiento.Service\obj\Debug\netstandard2.0\Estacionamiento.Service.pdb

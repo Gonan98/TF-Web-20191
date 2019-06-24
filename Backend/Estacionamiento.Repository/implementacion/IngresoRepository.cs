@@ -54,7 +54,16 @@ namespace Estacionamiento.Repository.implementacion
 
         public Ingreso Get(int id)
         {
-             throw new System.NotImplementedException ();
+             var result = new Ingreso();
+            try
+            {
+                result = context.Ingresos.Single(x =>x.EspacioId==id);
+            }
+            catch (System.Exception)
+            {
+                throw;
+            }
+            return result;
         }
 
         public IEnumerable<Ingreso> GetAll()

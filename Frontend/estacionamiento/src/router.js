@@ -1,4 +1,4 @@
-import Vue from 'vue'
+﻿import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Cajero from './components/Cajero.vue'
@@ -10,17 +10,15 @@ import Localizacion from './components/Localizacion.vue'
 import Tarifa from './components/Tarifa.vue'
 import PuntoAtencion from './components/PuntoAtencion.vue'
 import IngresoCliente from './components/IngresoCliente.vue'
+
+import Index from  './components/Index.vue'
 Vue.use(Router)
 
 export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: Home
-    },
+    
     {
       path: '/about',
       name: 'about',
@@ -69,6 +67,12 @@ export default new Router({
       path: '/cliente/ingreso',
       name: 'clienteingreso',
       component: IngresoCliente
+    },
+    {
+      path: '/',
+      name: 'index',
+      component: Index
     }
+
   ]
 })

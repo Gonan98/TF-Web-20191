@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 namespace Estacionamiento.Domain
 {
     public class Estacionamientos
@@ -9,5 +10,8 @@ namespace Estacionamiento.Domain
         public string Direccion { get; set; }
         public int LocalizacionId { get; set; }
         public Localizacion Localizacion {get; set;}
+
+        public ICollection<Espacio> espacios { get; set; } 
+
     }
 }

@@ -10,8 +10,9 @@ Vue.config.productionTip = false
 
 axios.defaults.baseURL='http://localhost:5000/'
 
-new Vue({
+var vm =new Vue({
   router,
   store,
   render: h => h(App)
-}).$mount('#app')
+})
+vm.$mount('#app')

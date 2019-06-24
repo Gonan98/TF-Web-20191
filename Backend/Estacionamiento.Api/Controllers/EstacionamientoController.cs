@@ -19,6 +19,13 @@ namespace Estacionamiento.Api.Controllers
                 estacionamientoservice.GetAll()
             );
         }
+         [HttpGet("{id}")]
+        public ActionResult Get([FromRoute]int id)
+        {
+            return Ok(
+                estacionamientoservice.Get(id)
+            );
+        }
 
         [HttpPost]
         public ActionResult Post([FromBody] Estacionamientos estacionamiento)

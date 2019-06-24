@@ -34,7 +34,7 @@ namespace Estacionamiento.Repository.implementacion
             var result = new Comprobante();
             try
             {
-                result = context.Comprobantes.Single(x => x.Id == id);
+                result = context.Comprobantes.Single(x => x.Id==id);
             }
             catch (System.Exception)
             {
