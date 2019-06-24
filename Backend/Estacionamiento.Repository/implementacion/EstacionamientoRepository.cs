@@ -41,9 +41,7 @@ namespace Estacionamiento.Repository.implementacion
             var result = new List<Estacionamientos>();
             try
             {
-                
-
-                result = context.estacionamientos.ToList();
+                result = context.estacionamientos.Include(x=>x.Localizacion).ToList();
             }
 
             catch (System.Exception)

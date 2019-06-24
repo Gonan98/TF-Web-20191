@@ -61,3 +61,12 @@ D:\Enciclopedia\Universidad\AppsWeb\TFinal\Backend\Estacionamiento.Domain\obj\De
 D:\Enciclopedia\Universidad\AppsWeb\TFinal\Backend\Estacionamiento.Domain\obj\Debug\netstandard2.0\Estacionamiento.Domain.dll
 D:\Enciclopedia\Universidad\AppsWeb\TFinal\Backend\Estacionamiento.Domain\obj\Debug\netstandard2.0\Estacionamiento.Domain.pdb
 D:\Enciclopedia\Universidad\AppsWeb\TFinal\Backend\Estacionamiento.Domain\obj\Debug\netstandard2.0\Estacionamiento.Domain.csprojAssemblyReference.cache
+C:\Users\Cesar Gutierrez\Desktop\aplicaciones Web\TRABAJO_FINAL_WEB\estacionamiento_ver12\Backend\Estacionamiento.Domain\bin\Debug\netstandard2.0\Estacionamiento.Domain.deps.json
+C:\Users\Cesar Gutierrez\Desktop\aplicaciones Web\TRABAJO_FINAL_WEB\estacionamiento_ver12\Backend\Estacionamiento.Domain\bin\Debug\netstandard2.0\Estacionamiento.Domain.dll
+C:\Users\Cesar Gutierrez\Desktop\aplicaciones Web\TRABAJO_FINAL_WEB\estacionamiento_ver12\Backend\Estacionamiento.Domain\bin\Debug\netstandard2.0\Estacionamiento.Domain.pdb
+C:\Users\Cesar Gutierrez\Desktop\aplicaciones Web\TRABAJO_FINAL_WEB\estacionamiento_ver12\Backend\Estacionamiento.Domain\obj\Debug\netstandard2.0\Estacionamiento.Domain.csprojAssemblyReference.cache
+C:\Users\Cesar Gutierrez\Desktop\aplicaciones Web\TRABAJO_FINAL_WEB\estacionamiento_ver12\Backend\Estacionamiento.Domain\obj\Debug\netstandard2.0\Estacionamiento.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Cesar Gutierrez\Desktop\aplicaciones Web\TRABAJO_FINAL_WEB\estacionamiento_ver12\Backend\Estacionamiento.Domain\obj\Debug\netstandard2.0\Estacionamiento.Domain.AssemblyInfoInputs.cache
+C:\Users\Cesar Gutierrez\Desktop\aplicaciones Web\TRABAJO_FINAL_WEB\estacionamiento_ver12\Backend\Estacionamiento.Domain\obj\Debug\netstandard2.0\Estacionamiento.Domain.AssemblyInfo.cs
+C:\Users\Cesar Gutierrez\Desktop\aplicaciones Web\TRABAJO_FINAL_WEB\estacionamiento_ver12\Backend\Estacionamiento.Domain\obj\Debug\netstandard2.0\Estacionamiento.Domain.dll
+C:\Users\Cesar Gutierrez\Desktop\aplicaciones Web\TRABAJO_FINAL_WEB\estacionamiento_ver12\Backend\Estacionamiento.Domain\obj\Debug\netstandard2.0\Estacionamiento.Domain.pdb

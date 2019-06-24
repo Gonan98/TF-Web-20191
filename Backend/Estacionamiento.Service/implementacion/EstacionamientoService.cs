@@ -31,8 +31,7 @@ namespace Estacionamiento.Service.implementacion
         {
             var list=(List<Estacionamientos>)estacionamientoRepository.GetAll();
             var result=list.FirstOrDefault(x=>x.Nombre_Estacionamiento.Trim().ToLower()==entity.Nombre_Estacionamiento.Trim().ToLower());
-             var result2=list.FirstOrDefault(x=>x.Direccion.Trim().ToLower()==entity.Direccion.Trim().ToLower());
-            if (result==null || result2 ==null)
+            if (result==null )
             {
                 return estacionamientoRepository.Save(entity);
             }
@@ -40,13 +39,8 @@ namespace Estacionamiento.Service.implementacion
         }
 
         public bool Update(Estacionamientos entity)
-        {   var list=(List<Estacionamientos>)estacionamientoRepository.GetAll();
-            var result=list.FirstOrDefault(x=>x.Numero_Espacios==entity.Numero_Espacios);
-            if (result !=null){
+        {   
                 return estacionamientoRepository.Update(entity);
-            }else{
-                return false;
-            }
            
         }
     }
